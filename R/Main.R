@@ -17,8 +17,8 @@
 #' Execute the Study
 #'
 #' @details
-#' This function executes the Covid19TestInActiveCancer Study.
-#' 
+#' This function executes the Covid19ComplicationsRasInhibitors Study.
+#'
 #' The \code{createCohorts}, \code{synthesizePositiveControls}, \code{runAnalyses}, and \code{runDiagnostics} arguments
 #' are intended to be used to run parts of the full study at a time, but none of the parts are considered to be optional.
 #'
@@ -48,11 +48,12 @@
 #' @param synthesizePositiveControls  Should positive controls be synthesized?
 #' @param runAnalyses          Perform the cohort method analyses?
 #' @param runDiagnostics       Compute study diagnostics?
-#' @param packageResults       Should results be packaged for later sharing?     
+#' @param packageResults       Should results be packaged for later sharing?
 #' @param maxCores             How many parallel cores should be used? If more cores are made available
 #'                             this can speed up the analyses.
-#' @param minCellCount         The minimum number of subjects contributing to a count before it can be included 
+#' @param minCellCount         The minimum number of subjects contributing to a count before it can be included
 #'                             in packaged results.
+#' @param makePlots
 #'
 #' @examples
 #' \dontrun{
@@ -86,7 +87,8 @@ execute <- function(connectionDetails,
                     runDiagnostics = TRUE,
                     packageResults = TRUE,
                     maxCores = 4,
-                    minCellCount= 5) {
+                    minCellCount= 5,
+                    makePlots = FALSE) {
   if (!file.exists(outputFolder))
     dir.create(outputFolder, recursive = TRUE)
   if (!is.null(getOption("fftempdir")) && !file.exists(getOption("fftempdir"))) {
@@ -136,6 +138,7 @@ execute <- function(connectionDetails,
   if (runDiagnostics) {
     ParallelLogger::logInfo("Running diagnostics")
     generateDiagnostics(outputFolder = outputFolder,
+                        makePlots = makePlots,
                         maxCores = maxCores)
   }
   
