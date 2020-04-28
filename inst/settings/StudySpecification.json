@@ -1,0 +1,3850 @@
+{
+  "skeletonType": "ComparativeEffectStudy",
+  "positiveControlSynthesisArgs": {
+    "outputIdOffset": 10000,
+    "precision": 0.01,
+    "riskWindowStart": 0,
+    "control": {
+      "maxIterations": 1000,
+      "autoSearch": true,
+      "seed": null,
+      "initialBound": 2,
+      "gridSteps": 10,
+      "threads": 1,
+      "startingVariance": 0.01,
+      "useKKTSwindle": false,
+      "lowerLimit": 0.01,
+      "attr_class": "cyclopsControl",
+      "cvRepetitions": 1,
+      "noiseLevel": "quiet",
+      "fold": 10,
+      "minCVData": 100,
+      "resetCoefficients": false,
+      "upperLimit": 20,
+      "cvType": "auto",
+      "selectorType": "auto",
+      "convergenceType": "gradient",
+      "tuneSwindle": 10,
+      "maxBoundCount": 5,
+      "tolerance": 1.0E-6,
+      "algorithm": "ccd"
+    },
+    "washoutPeriod": 183,
+    "modelType": "survival",
+    "addExposureDaysToEnd": true,
+    "minOutcomeCountForModel": 50,
+    "firstOutcomeOnly": true,
+    "maxSubjectsForModel": 250000,
+    "minOutcomeCountForInjection": 25,
+    "prior": {
+      "variance": [1],
+      "useCrossValidation": true,
+      "priorType": "laplace",
+      "exclude": [0],
+      "neighborhood": null,
+      "attr_class": "cyclopsPrior",
+      "forceIntercept": false,
+      "graph": null
+    },
+    "effectSizes": [
+      1.5,
+      2,
+      4
+    ],
+    "covariateSettings": {
+      "VisitCountMediumTerm": false,
+      "ObservationShortTerm": true,
+      "shortTermStartDays": -30,
+      "MeasurementRangeGroupShortTerm": false,
+      "ConditionOccurrenceLongTerm": false,
+      "DrugEraStartLongTerm": false,
+      "VisitCountShortTerm": false,
+      "Chads2Vasc": true,
+      "ConditionGroupEraStartLongTerm": false,
+      "ConditionEraShortTerm": false,
+      "Dcsi": true,
+      "DrugGroupEraLongTerm": true,
+      "DrugGroupEraShortTerm": true,
+      "ConditionEraStartLongTerm": false,
+      "temporal": false,
+      "DemographicsIndexMonth": true,
+      "ConditionOccurrencePrimaryInpatientLongTerm": false,
+      "ConditionEraAnyTimePrior": false,
+      "addDescendantsToInclude": false,
+      "ConditionGroupEraStartMediumTerm": false,
+      "ProcedureOccurrenceLongTerm": true,
+      "DrugExposureLongTerm": false,
+      "DrugEraStartShortTerm": false,
+      "DistinctIngredientCountMediumTerm": false,
+      "DistinctMeasurementCountShortTerm": false,
+      "MeasurementRangeGroupLongTerm": true,
+      "ConditionGroupEraOverlapping": false,
+      "attr_fun": "getDbDefaultCovariateData",
+      "MeasurementRangeGroupMediumTerm": false,
+      "DrugGroupEraStartMediumTerm": false,
+      "MeasurementAnyTimePrior": false,
+      "MeasurementMediumTerm": false,
+      "includedCovariateIds": [],
+      "ConditionOccurrenceAnyTimePrior": false,
+      "DistinctConditionCountLongTerm": false,
+      "MeasurementValueLongTerm": false,
+      "DrugEraShortTerm": false,
+      "DrugGroupEraAnyTimePrior": false,
+      "DrugEraOverlapping": false,
+      "ConditionOccurrencePrimaryInpatientAnyTimePrior": false,
+      "ConditionEraMediumTerm": false,
+      "ConditionEraOverlapping": false,
+      "ConditionEraStartShortTerm": false,
+      "ObservationAnyTimePrior": false,
+      "VisitConceptCountShortTerm": false,
+      "DemographicsEthnicity": true,
+      "DistinctIngredientCountLongTerm": false,
+      "ConditionOccurrencePrimaryInpatientShortTerm": false,
+      "DemographicsAgeGroup": true,
+      "DistinctProcedureCountShortTerm": false,
+      "DistinctObservationCountMediumTerm": false,
+      "includedCovariateConceptIds": [],
+      "DrugGroupEraStartShortTerm": false,
+      "addDescendantsToExclude": false,
+      "DrugEraLongTerm": false,
+      "DistinctConditionCountShortTerm": false,
+      "ConditionGroupEraShortTerm": true,
+      "ConditionEraStartMediumTerm": false,
+      "VisitCountLongTerm": false,
+      "DemographicsRace": true,
+      "ProcedureOccurrenceAnyTimePrior": false,
+      "DistinctObservationCountLongTerm": false,
+      "attr_class": "covariateSettings",
+      "ProcedureOccurrenceMediumTerm": false,
+      "CharlsonIndex": true,
+      "DemographicsPriorObservationTime": false,
+      "MeasurementShortTerm": true,
+      "DistinctProcedureCountMediumTerm": false,
+      "ConditionEraLongTerm": false,
+      "DrugGroupEraStartLongTerm": false,
+      "DemographicsGender": true,
+      "DeviceExposureAnyTimePrior": false,
+      "ObservationLongTerm": true,
+      "DemographicsIndexYearMonth": false,
+      "ConditionOccurrenceMediumTerm": false,
+      "longTermStartDays": -365,
+      "DemographicsAge": false,
+      "DrugGroupEraOverlapping": true,
+      "DistinctMeasurementCountLongTerm": false,
+      "MeasurementRangeGroupAnyTimePrior": false,
+      "DistinctConditionCountMediumTerm": false,
+      "DrugGroupEraMediumTerm": false,
+      "ProcedureOccurrenceShortTerm": true,
+      "ObservationMediumTerm": false,
+      "ConditionGroupEraAnyTimePrior": false,
+      "Chads2": true,
+      "DrugExposureAnyTimePrior": false,
+      "DeviceExposureLongTerm": true,
+      "DemographicsTimeInCohort": false,
+      "DistinctMeasurementCountMediumTerm": false,
+      "MeasurementValueShortTerm": false,
+      "DeviceExposureMediumTerm": false,
+      "ConditionGroupEraStartShortTerm": false,
+      "ConditionOccurrencePrimaryInpatientMediumTerm": false,
+      "MeasurementLongTerm": true,
+      "DemographicsIndexYear": true,
+      "MeasurementValueMediumTerm": false,
+      "DrugEraStartMediumTerm": false,
+      "MeasurementValueAnyTimePrior": false,
+      "DistinctObservationCountShortTerm": false,
+      "DrugEraMediumTerm": false,
+      "ConditionGroupEraLongTerm": true,
+      "DrugExposureShortTerm": false,
+      "DistinctIngredientCountShortTerm": false,
+      "DeviceExposureShortTerm": true,
+      "mediumTermStartDays": -180,
+      "DemographicsPostObservationTime": false,
+      "VisitConceptCountLongTerm": false,
+      "VisitConceptCountMediumTerm": false,
+      "excludedCovariateConceptIds": [],
+      "ConditionGroupEraMediumTerm": false,
+      "DrugExposureMediumTerm": false,
+      "DistinctProcedureCountLongTerm": false,
+      "DrugEraAnyTimePrior": false,
+      "endDays": 0,
+      "ConditionOccurrenceShortTerm": false
+    },
+    "riskWindowEnd": 30,
+    "firstExposureOnly": true,
+    "removePeopleWithPriorOutcomes": true
+  },
+  "organizationName": "OHDSI",
+  "description": null,
+  "negativeControlExposureCohortDefinition": {},
+  "version": "v2.7.0",
+  "estimationAnalysisSettings": {
+    "analysisSpecification": {
+      "targetComparatorOutcomes": [{
+        "targetId": 694,
+        "comparatorId": 697,
+        "includedCovariateConceptIds": [],
+        "excludedCovariateConceptIds": [],
+        "outcomeIds": [58]
+      }],
+      "cohortMethodAnalysisList": [{
+        "comparatorType": null,
+        "fitOutcomeModel": true,
+        "getDbCohortMethodDataArgs": {
+          "restrictToCommonPeriod": false,
+          "removeDuplicateSubjects": "remove all",
+          "maxCohortSize": 0,
+          "excludeDrugsFromCovariates": false,
+          "covariateSettings": {
+            "VisitCountMediumTerm": false,
+            "ObservationShortTerm": false,
+            "shortTermStartDays": -30,
+            "MeasurementRangeGroupShortTerm": false,
+            "ConditionOccurrenceLongTerm": false,
+            "DrugEraStartLongTerm": false,
+            "VisitCountShortTerm": false,
+            "Chads2Vasc": false,
+            "ConditionGroupEraStartLongTerm": false,
+            "ConditionEraShortTerm": false,
+            "Dcsi": false,
+            "DrugGroupEraLongTerm": false,
+            "DrugGroupEraShortTerm": false,
+            "ConditionEraStartLongTerm": false,
+            "temporal": false,
+            "DemographicsIndexMonth": false,
+            "ConditionOccurrencePrimaryInpatientLongTerm": false,
+            "ConditionEraAnyTimePrior": false,
+            "addDescendantsToInclude": false,
+            "ConditionGroupEraStartMediumTerm": false,
+            "ProcedureOccurrenceLongTerm": false,
+            "DrugExposureLongTerm": false,
+            "DrugEraStartShortTerm": false,
+            "DistinctIngredientCountMediumTerm": false,
+            "DistinctMeasurementCountShortTerm": false,
+            "MeasurementRangeGroupLongTerm": false,
+            "ConditionGroupEraOverlapping": false,
+            "attr_fun": "getDbDefaultCovariateData",
+            "MeasurementRangeGroupMediumTerm": false,
+            "DrugGroupEraStartMediumTerm": false,
+            "MeasurementAnyTimePrior": false,
+            "MeasurementMediumTerm": false,
+            "includedCovariateIds": [],
+            "ConditionOccurrenceAnyTimePrior": false,
+            "DistinctConditionCountLongTerm": false,
+            "MeasurementValueLongTerm": false,
+            "DrugEraShortTerm": false,
+            "DrugGroupEraAnyTimePrior": false,
+            "DrugEraOverlapping": false,
+            "ConditionOccurrencePrimaryInpatientAnyTimePrior": false,
+            "ConditionEraMediumTerm": false,
+            "ConditionEraOverlapping": false,
+            "ConditionEraStartShortTerm": false,
+            "ObservationAnyTimePrior": false,
+            "VisitConceptCountShortTerm": false,
+            "DemographicsEthnicity": false,
+            "DistinctIngredientCountLongTerm": false,
+            "ConditionOccurrencePrimaryInpatientShortTerm": false,
+            "DemographicsAgeGroup": true,
+            "DistinctProcedureCountShortTerm": false,
+            "DistinctObservationCountMediumTerm": false,
+            "includedCovariateConceptIds": [],
+            "DrugGroupEraStartShortTerm": false,
+            "addDescendantsToExclude": false,
+            "DrugEraLongTerm": false,
+            "DistinctConditionCountShortTerm": false,
+            "ConditionGroupEraShortTerm": false,
+            "ConditionEraStartMediumTerm": false,
+            "VisitCountLongTerm": false,
+            "DemographicsRace": true,
+            "ProcedureOccurrenceAnyTimePrior": false,
+            "DistinctObservationCountLongTerm": false,
+            "attr_class": "covariateSettings",
+            "ProcedureOccurrenceMediumTerm": false,
+            "CharlsonIndex": false,
+            "DemographicsPriorObservationTime": false,
+            "MeasurementShortTerm": false,
+            "DistinctProcedureCountMediumTerm": false,
+            "ConditionEraLongTerm": false,
+            "DrugGroupEraStartLongTerm": false,
+            "DemographicsGender": true,
+            "DeviceExposureAnyTimePrior": false,
+            "ObservationLongTerm": false,
+            "DemographicsIndexYearMonth": true,
+            "ConditionOccurrenceMediumTerm": false,
+            "longTermStartDays": -365,
+            "DemographicsAge": false,
+            "DrugGroupEraOverlapping": false,
+            "DistinctMeasurementCountLongTerm": false,
+            "MeasurementRangeGroupAnyTimePrior": false,
+            "DistinctConditionCountMediumTerm": false,
+            "DrugGroupEraMediumTerm": false,
+            "ProcedureOccurrenceShortTerm": false,
+            "ObservationMediumTerm": false,
+            "ConditionGroupEraAnyTimePrior": false,
+            "Chads2": false,
+            "DrugExposureAnyTimePrior": false,
+            "DeviceExposureLongTerm": false,
+            "DemographicsTimeInCohort": false,
+            "DistinctMeasurementCountMediumTerm": false,
+            "MeasurementValueShortTerm": false,
+            "DeviceExposureMediumTerm": false,
+            "ConditionGroupEraStartShortTerm": false,
+            "ConditionOccurrencePrimaryInpatientMediumTerm": false,
+            "MeasurementLongTerm": false,
+            "DemographicsIndexYear": false,
+            "MeasurementValueMediumTerm": false,
+            "DrugEraStartMediumTerm": false,
+            "MeasurementValueAnyTimePrior": false,
+            "DistinctObservationCountShortTerm": false,
+            "DrugEraMediumTerm": false,
+            "ConditionGroupEraLongTerm": false,
+            "DrugExposureShortTerm": false,
+            "DistinctIngredientCountShortTerm": false,
+            "DeviceExposureShortTerm": false,
+            "mediumTermStartDays": -180,
+            "DemographicsPostObservationTime": false,
+            "VisitConceptCountLongTerm": false,
+            "VisitConceptCountMediumTerm": false,
+            "excludedCovariateConceptIds": [],
+            "ConditionGroupEraMediumTerm": false,
+            "DrugExposureMediumTerm": false,
+            "DistinctProcedureCountLongTerm": false,
+            "DrugEraAnyTimePrior": false,
+            "endDays": -1,
+            "ConditionOccurrenceShortTerm": false
+          },
+          "studyStartDate": null,
+          "washoutPeriod": 0,
+          "firstExposureOnly": false,
+          "attr_class": "args",
+          "studyEndDate": null
+        },
+        "trimByPs": false,
+        "createStudyPopArgs": {
+          "restrictToCommonPeriod": false,
+          "removeDuplicateSubjects": "keep all",
+          "minDaysAtRisk": 0,
+          "addExposureDaysToStart": false,
+          "riskWindowStart": 0,
+          "washoutPeriod": 0,
+          "attr_class": "args",
+          "censorAtNewRiskWindow": false,
+          "addExposureDaysToEnd": false,
+          "priorOutcomeLookback": 99999,
+          "removeSubjectsWithPriorOutcome": false,
+          "riskWindowEnd": 14,
+          "firstExposureOnly": false
+        },
+        "description": "minimum PS stratification",
+        "trimByPsArgs": {
+          "trimFraction": 0.05,
+          "attr_class": "args"
+        },
+        "targetType": null,
+        "attr_class": "cmAnalysis",
+        "stratifyByPs": true,
+        "stratifyByPsAndCovariates": false,
+        "matchOnPsAndCovariatesArgs": {
+          "caliper": 0.2,
+          "caliperScale": "standardized logit",
+          "maxRatio": 1,
+          "covariateIds": [],
+          "attr_class": "args"
+        },
+        "trimByPsToEquipoise": false,
+        "matchOnPs": false,
+        "stratifyByPsAndCovariatesArgs": {
+          "baseSelection": "all",
+          "covariateIds": [],
+          "numberOfStrata": 5,
+          "attr_class": "args"
+        },
+        "matchOnPsArgs": {
+          "caliper": 0.2,
+          "caliperScale": "standardized logit",
+          "maxRatio": 1,
+          "attr_class": "args",
+          "stratificationColumns": []
+        },
+        "stratifyByPsArgs": {
+          "baseSelection": "all",
+          "numberOfStrata": 5,
+          "attr_class": "args",
+          "stratificationColumns": []
+        },
+        "matchOnPsAndCovariates": false,
+        "analysisId": 1,
+        "createPsArgs": {
+          "stopOnError": false,
+          "excludeCovariateIds": [],
+          "prior": {
+            "variance": [1],
+            "useCrossValidation": true,
+            "priorType": "laplace",
+            "exclude": [0],
+            "neighborhood": null,
+            "attr_class": "cyclopsPrior",
+            "forceIntercept": false,
+            "graph": null
+          },
+          "errorOnHighCorrelation": false,
+          "control": {
+            "maxIterations": 1000,
+            "autoSearch": true,
+            "seed": null,
+            "initialBound": 2,
+            "gridSteps": 10,
+            "threads": 1,
+            "startingVariance": 0.01,
+            "useKKTSwindle": false,
+            "lowerLimit": 0.01,
+            "attr_class": "cyclopsControl",
+            "cvRepetitions": 10,
+            "noiseLevel": "silent",
+            "fold": 10,
+            "minCVData": 100,
+            "resetCoefficients": false,
+            "upperLimit": 20,
+            "cvType": "auto",
+            "selectorType": "auto",
+            "convergenceType": "gradient",
+            "tuneSwindle": 10,
+            "maxBoundCount": 5,
+            "tolerance": 2.0E-7,
+            "algorithm": "ccd"
+          },
+          "attr_class": "args",
+          "includeCovariateIds": [],
+          "maxCohortSizeForFitting": 250000
+        },
+        "trimByPsToEquipoiseArgs": {
+          "bounds": [
+            0.25,
+            0.75
+          ],
+          "attr_class": "args"
+        },
+        "fitOutcomeModelArgs": {
+          "excludeCovariateIds": [],
+          "useCovariates": false,
+          "prior": {
+            "variance": [1],
+            "useCrossValidation": true,
+            "priorType": "laplace",
+            "exclude": [0],
+            "neighborhood": null,
+            "attr_class": "cyclopsPrior",
+            "forceIntercept": false,
+            "graph": null
+          },
+          "inversePtWeighting": false,
+          "control": {
+            "maxIterations": 1000,
+            "autoSearch": true,
+            "seed": null,
+            "initialBound": 2,
+            "gridSteps": 10,
+            "threads": 1,
+            "startingVariance": 0.01,
+            "useKKTSwindle": false,
+            "lowerLimit": 0.01,
+            "attr_class": "cyclopsControl",
+            "cvRepetitions": 10,
+            "noiseLevel": "quiet",
+            "fold": 10,
+            "minCVData": 100,
+            "resetCoefficients": false,
+            "upperLimit": 20,
+            "cvType": "auto",
+            "selectorType": "auto",
+            "convergenceType": "gradient",
+            "tuneSwindle": 10,
+            "maxBoundCount": 5,
+            "tolerance": 2.0E-7,
+            "algorithm": "ccd"
+          },
+          "modelType": "cox",
+          "stratified": true,
+          "attr_class": "args",
+          "interactionCovariateIds": [],
+          "includeCovariateIds": []
+        },
+        "createPs": true
+      }]
+    },
+    "estimationType": "ComparativeCohortAnalysis"
+  },
+  "skeletonVersion": "v0.0.1",
+  "negativeControlOutcomeCohortDefinition": {
+    "detectOnDescendants": true,
+    "domains": [
+      "condition",
+      "procedure"
+    ],
+    "occurrenceType": "all"
+  },
+  "createdDate": null,
+  "conceptSetCrossReference": [{
+    "targetName": "negativeControlOutcomes",
+    "conceptSetId": 228,
+    "propertyName": "outcomeId",
+    "targetIndex": 0
+  }],
+  "createdBy": null,
+  "cohortDefinitions": [
+    {
+      "expression": {
+        "ExpressionLimit": {"Type": "First"},
+        "CollapseSettings": {
+          "CollapseType": "ERA",
+          "EraPad": 0
+        },
+        "CensorWindow": {
+          "StartDate": null,
+          "EndDate": null
+        },
+        "ConceptSets": [
+          {
+            "expression": {"items": [{
+              "isExcluded": false,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_ID": 37310282,
+                "STANDARD_CONCEPT": "S",
+                "CONCEPT_CODE": "1240581000000104",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "2019 novel coronavirus detected",
+                "DOMAIN_ID": "Measurement",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "CONCEPT_CLASS_ID": "Clinical Finding",
+                "INVALID_REASON": "V"
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            }]},
+            "name": "COVID-19 specific testing (pre-coordinated Measurements) - Positive",
+            "id": 1
+          },
+          {
+            "expression": {"items": [
+              {
+                "isExcluded": true,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 37310282,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "1240581000000104",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "2019 novel coronavirus detected",
+                  "DOMAIN_ID": "Measurement",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Clinical Finding",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": true,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 37310281,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "1240591000000102",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "2019 novel coronavirus not detected",
+                  "DOMAIN_ID": "Measurement",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Clinical Finding",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 756055,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "OMOP4873969",
+                  "VOCABULARY_ID": "OMOP Extension",
+                  "CONCEPT_NAME": "Measurement of severe acute respiratory syndrome coronavirus 2",
+                  "DOMAIN_ID": "Measurement",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Procedure",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              }
+            ]},
+            "name": "COVID-19 specific testing (pre-coordinated Measurements excluded)",
+            "id": 2
+          },
+          {
+            "expression": {"items": [{
+              "isExcluded": false,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_ID": 37311061,
+                "STANDARD_CONCEPT": "S",
+                "CONCEPT_CODE": "840539006",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "Disease caused by severe acute respiratory syndrome coronavirus 2",
+                "DOMAIN_ID": "Condition",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "CONCEPT_CLASS_ID": "Clinical Finding",
+                "INVALID_REASON": "V"
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            }]},
+            "name": "COVID-19 (including asymptomatic)",
+            "id": 3
+          },
+          {
+            "expression": {"items": [
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 443392,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "363346000",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Malignant neoplastic disease",
+                  "DOMAIN_ID": "Condition",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Clinical Finding",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": true,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 4178976,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "363478007",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Malignant tumor of thyroid gland",
+                  "DOMAIN_ID": "Condition",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Clinical Finding",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": true,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 4201622,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "315007008",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Metastasis from malignant tumor of thyroid",
+                  "DOMAIN_ID": "Condition",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Clinical Finding",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": false
+              },
+              {
+                "isExcluded": true,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 36717298,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "13351431000119102",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Secondary malignant neoplasm of lymph nodes of neck from thyroid",
+                  "DOMAIN_ID": "Condition",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Clinical Finding",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": false
+              },
+              {
+                "isExcluded": true,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 4179980,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "429114002",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Malignant basal cell neoplasm of skin",
+                  "DOMAIN_ID": "Condition",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Clinical Finding",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": true,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 4111921,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "254651007",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Squamous cell carcinoma of skin",
+                  "DOMAIN_ID": "Condition",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Clinical Finding",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              }
+            ]},
+            "name": "Malignant neoplasm except thyroid cancer and non-melanoma skin cancer",
+            "id": 4
+          }
+        ],
+        "cdmVersionRange": ">=5.0.0",
+        "CensoringCriteria": [],
+        "QualifiedLimit": {"Type": "All"},
+        "InclusionRules": [
+          {
+            "expression": {
+              "CriteriaList": [],
+              "Type": "ALL",
+              "DemographicCriteriaList": [{
+                "Ethnicity": null,
+                "OccurrenceEndDate": null,
+                "Race": null,
+                "Gender": null,
+                "OccurrenceStartDate": null,
+                "Age": {
+                  "Op": "gte",
+                  "Extent": null,
+                  "Value": 18
+                }
+              }],
+              "Groups": [],
+              "Count": null
+            },
+            "name": "age >=18",
+            "description": null
+          },
+          {
+            "expression": {
+              "CriteriaList": [{
+                "RestrictVisit": false,
+                "StartWindow": {
+                  "UseEventEnd": false,
+                  "Start": {
+                    "Days": null,
+                    "Coeff": -1
+                  },
+                  "End": {
+                    "Days": 365,
+                    "Coeff": -1
+                  },
+                  "UseIndexEnd": false
+                },
+                "IgnoreObservationPeriod": false,
+                "EndWindow": {
+                  "UseEventEnd": true,
+                  "Start": {
+                    "Days": 0,
+                    "Coeff": -1
+                  },
+                  "End": {
+                    "Days": null,
+                    "Coeff": 1
+                  },
+                  "UseIndexEnd": true
+                },
+                "Criteria": {"ObservationPeriod": {
+                  "PeriodType": null,
+                  "CorrelatedCriteria": null,
+                  "AgeAtStart": null,
+                  "UserDefinedPeriod": null,
+                  "AgeAtEnd": null,
+                  "First": null,
+                  "PeriodEndDate": null,
+                  "PeriodStartDate": null,
+                  "PeriodLength": null
+                }},
+                "Occurrence": {
+                  "Type": 2,
+                  "IsDistinct": false,
+                  "Count": 1
+                }
+              }],
+              "Type": "ALL",
+              "DemographicCriteriaList": [],
+              "Groups": [],
+              "Count": null
+            },
+            "name": "has >=365d of prior observation",
+            "description": null
+          },
+          {
+            "expression": {
+              "CriteriaList": [
+                {
+                  "RestrictVisit": false,
+                  "StartWindow": {
+                    "UseEventEnd": false,
+                    "Start": {
+                      "Days": 0,
+                      "Coeff": -1
+                    },
+                    "End": {
+                      "Days": 14,
+                      "Coeff": 1
+                    },
+                    "UseIndexEnd": false
+                  },
+                  "IgnoreObservationPeriod": false,
+                  "EndWindow": null,
+                  "Criteria": {"Measurement": {
+                    "Operator": null,
+                    "RangeHigh": null,
+                    "MeasurementTypeExclude": false,
+                    "ValueAsConcept": null,
+                    "CorrelatedCriteria": null,
+                    "RangeHighRatio": null,
+                    "CodesetId": 1,
+                    "ProviderSpecialty": null,
+                    "Gender": null,
+                    "Unit": null,
+                    "RangeLowRatio": null,
+                    "MeasurementType": null,
+                    "MeasurementSourceConcept": null,
+                    "VisitType": null,
+                    "ValueAsNumber": null,
+                    "First": null,
+                    "OccurrenceStartDate": null,
+                    "RangeLow": null,
+                    "Abnormal": null,
+                    "Age": null
+                  }},
+                  "Occurrence": {
+                    "Type": 2,
+                    "IsDistinct": false,
+                    "Count": 1
+                  }
+                },
+                {
+                  "RestrictVisit": false,
+                  "StartWindow": {
+                    "UseEventEnd": false,
+                    "Start": {
+                      "Days": 0,
+                      "Coeff": -1
+                    },
+                    "End": {
+                      "Days": 14,
+                      "Coeff": 1
+                    },
+                    "UseIndexEnd": false
+                  },
+                  "IgnoreObservationPeriod": false,
+                  "EndWindow": null,
+                  "Criteria": {"Measurement": {
+                    "Operator": null,
+                    "RangeHigh": null,
+                    "MeasurementTypeExclude": false,
+                    "ValueAsConcept": [
+                      {
+                        "INVALID_REASON_CAPTION": "Unknown",
+                        "CONCEPT_ID": 4126681,
+                        "STANDARD_CONCEPT": null,
+                        "CONCEPT_CODE": "260373001",
+                        "VOCABULARY_ID": "SNOMED",
+                        "CONCEPT_NAME": "Detected",
+                        "DOMAIN_ID": "Meas Value",
+                        "STANDARD_CONCEPT_CAPTION": "Unknown",
+                        "CONCEPT_CLASS_ID": null,
+                        "INVALID_REASON": null
+                      },
+                      {
+                        "INVALID_REASON_CAPTION": "Unknown",
+                        "CONCEPT_ID": 45877985,
+                        "STANDARD_CONCEPT": null,
+                        "CONCEPT_CODE": "LA11882-0",
+                        "VOCABULARY_ID": "LOINC",
+                        "CONCEPT_NAME": "Detected",
+                        "DOMAIN_ID": "Meas Value",
+                        "STANDARD_CONCEPT_CAPTION": "Unknown",
+                        "CONCEPT_CLASS_ID": null,
+                        "INVALID_REASON": null
+                      },
+                      {
+                        "INVALID_REASON_CAPTION": "Unknown",
+                        "CONCEPT_ID": 9191,
+                        "STANDARD_CONCEPT": null,
+                        "CONCEPT_CODE": "10828004",
+                        "VOCABULARY_ID": "SNOMED",
+                        "CONCEPT_NAME": "Positive",
+                        "DOMAIN_ID": "Meas Value",
+                        "STANDARD_CONCEPT_CAPTION": "Unknown",
+                        "CONCEPT_CLASS_ID": null,
+                        "INVALID_REASON": null
+                      },
+                      {
+                        "INVALID_REASON_CAPTION": "Unknown",
+                        "CONCEPT_ID": 45884084,
+                        "STANDARD_CONCEPT": null,
+                        "CONCEPT_CODE": "LA6576-8",
+                        "VOCABULARY_ID": "LOINC",
+                        "CONCEPT_NAME": "Positive",
+                        "DOMAIN_ID": "Meas Value",
+                        "STANDARD_CONCEPT_CAPTION": "Unknown",
+                        "CONCEPT_CLASS_ID": null,
+                        "INVALID_REASON": null
+                      },
+                      {
+                        "INVALID_REASON_CAPTION": "Unknown",
+                        "CONCEPT_ID": 4181412,
+                        "STANDARD_CONCEPT": null,
+                        "CONCEPT_CODE": "52101004",
+                        "VOCABULARY_ID": "SNOMED",
+                        "CONCEPT_NAME": "Present",
+                        "DOMAIN_ID": "Meas Value",
+                        "STANDARD_CONCEPT_CAPTION": "Unknown",
+                        "CONCEPT_CLASS_ID": null,
+                        "INVALID_REASON": null
+                      },
+                      {
+                        "INVALID_REASON_CAPTION": "Unknown",
+                        "CONCEPT_ID": 45879438,
+                        "STANDARD_CONCEPT": null,
+                        "CONCEPT_CODE": "LA9633-4",
+                        "VOCABULARY_ID": "LOINC",
+                        "CONCEPT_NAME": "Present",
+                        "DOMAIN_ID": "Meas Value",
+                        "STANDARD_CONCEPT_CAPTION": "Unknown",
+                        "CONCEPT_CLASS_ID": null,
+                        "INVALID_REASON": null
+                      }
+                    ],
+                    "CorrelatedCriteria": null,
+                    "RangeHighRatio": null,
+                    "CodesetId": 2,
+                    "ProviderSpecialty": null,
+                    "Gender": null,
+                    "Unit": null,
+                    "RangeLowRatio": null,
+                    "MeasurementType": null,
+                    "MeasurementSourceConcept": null,
+                    "VisitType": null,
+                    "ValueAsNumber": null,
+                    "First": null,
+                    "OccurrenceStartDate": null,
+                    "RangeLow": null,
+                    "Abnormal": null,
+                    "Age": null
+                  }},
+                  "Occurrence": {
+                    "Type": 2,
+                    "IsDistinct": false,
+                    "Count": 1
+                  }
+                },
+                {
+                  "RestrictVisit": false,
+                  "StartWindow": {
+                    "UseEventEnd": false,
+                    "Start": {
+                      "Days": 0,
+                      "Coeff": -1
+                    },
+                    "End": {
+                      "Days": 14,
+                      "Coeff": 1
+                    },
+                    "UseIndexEnd": false
+                  },
+                  "IgnoreObservationPeriod": false,
+                  "EndWindow": null,
+                  "Criteria": {"Observation": {
+                    "ValueAsConcept": [
+                      {
+                        "INVALID_REASON_CAPTION": "Unknown",
+                        "CONCEPT_ID": 4126681,
+                        "STANDARD_CONCEPT": null,
+                        "CONCEPT_CODE": "260373001",
+                        "VOCABULARY_ID": "SNOMED",
+                        "CONCEPT_NAME": "Detected",
+                        "DOMAIN_ID": "Meas Value",
+                        "STANDARD_CONCEPT_CAPTION": "Unknown",
+                        "CONCEPT_CLASS_ID": null,
+                        "INVALID_REASON": null
+                      },
+                      {
+                        "INVALID_REASON_CAPTION": "Unknown",
+                        "CONCEPT_ID": 45877985,
+                        "STANDARD_CONCEPT": null,
+                        "CONCEPT_CODE": "LA11882-0",
+                        "VOCABULARY_ID": "LOINC",
+                        "CONCEPT_NAME": "Detected",
+                        "DOMAIN_ID": "Meas Value",
+                        "STANDARD_CONCEPT_CAPTION": "Unknown",
+                        "CONCEPT_CLASS_ID": null,
+                        "INVALID_REASON": null
+                      },
+                      {
+                        "INVALID_REASON_CAPTION": "Unknown",
+                        "CONCEPT_ID": 9191,
+                        "STANDARD_CONCEPT": null,
+                        "CONCEPT_CODE": "10828004",
+                        "VOCABULARY_ID": "SNOMED",
+                        "CONCEPT_NAME": "Positive",
+                        "DOMAIN_ID": "Meas Value",
+                        "STANDARD_CONCEPT_CAPTION": "Unknown",
+                        "CONCEPT_CLASS_ID": null,
+                        "INVALID_REASON": null
+                      },
+                      {
+                        "INVALID_REASON_CAPTION": "Unknown",
+                        "CONCEPT_ID": 45884084,
+                        "STANDARD_CONCEPT": null,
+                        "CONCEPT_CODE": "LA6576-8",
+                        "VOCABULARY_ID": "LOINC",
+                        "CONCEPT_NAME": "Positive",
+                        "DOMAIN_ID": "Meas Value",
+                        "STANDARD_CONCEPT_CAPTION": "Unknown",
+                        "CONCEPT_CLASS_ID": null,
+                        "INVALID_REASON": null
+                      },
+                      {
+                        "INVALID_REASON_CAPTION": "Unknown",
+                        "CONCEPT_ID": 4181412,
+                        "STANDARD_CONCEPT": null,
+                        "CONCEPT_CODE": "52101004",
+                        "VOCABULARY_ID": "SNOMED",
+                        "CONCEPT_NAME": "Present",
+                        "DOMAIN_ID": "Meas Value",
+                        "STANDARD_CONCEPT_CAPTION": "Unknown",
+                        "CONCEPT_CLASS_ID": null,
+                        "INVALID_REASON": null
+                      },
+                      {
+                        "INVALID_REASON_CAPTION": "Unknown",
+                        "CONCEPT_ID": 45879438,
+                        "STANDARD_CONCEPT": null,
+                        "CONCEPT_CODE": "LA9633-4",
+                        "VOCABULARY_ID": "LOINC",
+                        "CONCEPT_NAME": "Present",
+                        "DOMAIN_ID": "Meas Value",
+                        "STANDARD_CONCEPT_CAPTION": "Unknown",
+                        "CONCEPT_CLASS_ID": null,
+                        "INVALID_REASON": null
+                      }
+                    ],
+                    "ObservationType": null,
+                    "CorrelatedCriteria": null,
+                    "ObservationTypeExclude": false,
+                    "ValueAsString": null,
+                    "CodesetId": 2,
+                    "ProviderSpecialty": null,
+                    "Gender": null,
+                    "Unit": null,
+                    "ObservationSourceConcept": null,
+                    "VisitType": null,
+                    "ValueAsNumber": null,
+                    "Qualifier": null,
+                    "First": null,
+                    "OccurrenceStartDate": null,
+                    "Age": null
+                  }},
+                  "Occurrence": {
+                    "Type": 2,
+                    "IsDistinct": false,
+                    "Count": 1
+                  }
+                },
+                {
+                  "RestrictVisit": false,
+                  "StartWindow": {
+                    "UseEventEnd": false,
+                    "Start": {
+                      "Days": 0,
+                      "Coeff": -1
+                    },
+                    "End": {
+                      "Days": 14,
+                      "Coeff": 1
+                    },
+                    "UseIndexEnd": false
+                  },
+                  "IgnoreObservationPeriod": false,
+                  "EndWindow": null,
+                  "Criteria": {"ConditionOccurrence": {
+                    "OccurrenceEndDate": null,
+                    "CorrelatedCriteria": null,
+                    "ConditionTypeExclude": false,
+                    "CodesetId": 3,
+                    "ProviderSpecialty": null,
+                    "Gender": null,
+                    "VisitType": null,
+                    "First": null,
+                    "OccurrenceStartDate": null,
+                    "ConditionType": null,
+                    "ConditionSourceConcept": null,
+                    "StopReason": null,
+                    "Age": null
+                  }},
+                  "Occurrence": {
+                    "Type": 2,
+                    "IsDistinct": false,
+                    "Count": 1
+                  }
+                }
+              ],
+              "Type": "ANY",
+              "DemographicCriteriaList": [],
+              "Groups": [],
+              "Count": null
+            },
+            "name": "Positive test result or diagnosis for COVID-19",
+            "description": "Positive test result or diagnosis for COVID-19"
+          },
+          {
+            "expression": {
+              "CriteriaList": [{
+                "RestrictVisit": false,
+                "StartWindow": {
+                  "UseEventEnd": false,
+                  "Start": {
+                    "Days": 1825,
+                    "Coeff": -1
+                  },
+                  "End": {
+                    "Days": null,
+                    "Coeff": 1
+                  },
+                  "UseIndexEnd": false
+                },
+                "IgnoreObservationPeriod": false,
+                "EndWindow": null,
+                "Criteria": {"ConditionOccurrence": {
+                  "OccurrenceEndDate": null,
+                  "CorrelatedCriteria": null,
+                  "ConditionTypeExclude": false,
+                  "CodesetId": 4,
+                  "ProviderSpecialty": null,
+                  "Gender": null,
+                  "VisitType": null,
+                  "First": true,
+                  "OccurrenceStartDate": null,
+                  "ConditionType": null,
+                  "ConditionSourceConcept": null,
+                  "StopReason": null,
+                  "Age": null
+                }},
+                "Occurrence": {
+                  "Type": 2,
+                  "IsDistinct": false,
+                  "Count": 1
+                }
+              }],
+              "Type": "ALL",
+              "DemographicCriteriaList": [],
+              "Groups": [],
+              "Count": null
+            },
+            "name": "First cancer diagnosis within 5 years",
+            "description": null
+          },
+          {
+            "expression": {
+              "CriteriaList": [{
+                "RestrictVisit": false,
+                "StartWindow": {
+                  "UseEventEnd": false,
+                  "Start": {
+                    "Days": 180,
+                    "Coeff": -1
+                  },
+                  "End": {
+                    "Days": 0,
+                    "Coeff": 1
+                  },
+                  "UseIndexEnd": false
+                },
+                "IgnoreObservationPeriod": false,
+                "EndWindow": null,
+                "Criteria": {"VisitOccurrence": {
+                  "OccurrenceEndDate": null,
+                  "VisitLength": null,
+                  "CorrelatedCriteria": {
+                    "CriteriaList": [{
+                      "RestrictVisit": false,
+                      "StartWindow": {
+                        "UseEventEnd": false,
+                        "Start": {
+                          "Days": null,
+                          "Coeff": -1
+                        },
+                        "End": {
+                          "Days": null,
+                          "Coeff": 1
+                        },
+                        "UseIndexEnd": false
+                      },
+                      "IgnoreObservationPeriod": false,
+                      "EndWindow": null,
+                      "Criteria": {"ConditionOccurrence": {
+                        "OccurrenceEndDate": null,
+                        "CorrelatedCriteria": null,
+                        "ConditionTypeExclude": false,
+                        "CodesetId": 4,
+                        "ProviderSpecialty": null,
+                        "Gender": null,
+                        "VisitType": null,
+                        "First": null,
+                        "OccurrenceStartDate": null,
+                        "ConditionType": [
+                          {
+                            "INVALID_REASON_CAPTION": "Unknown",
+                            "CONCEPT_ID": 38000183,
+                            "STANDARD_CONCEPT": null,
+                            "CONCEPT_CODE": "OMOP4822059",
+                            "VOCABULARY_ID": "Condition Type",
+                            "CONCEPT_NAME": "Inpatient detail - primary",
+                            "DOMAIN_ID": "Type Concept",
+                            "STANDARD_CONCEPT_CAPTION": "Unknown",
+                            "CONCEPT_CLASS_ID": null,
+                            "INVALID_REASON": null
+                          },
+                          {
+                            "INVALID_REASON_CAPTION": "Unknown",
+                            "CONCEPT_ID": 38000199,
+                            "STANDARD_CONCEPT": null,
+                            "CONCEPT_CODE": "OMOP4822075",
+                            "VOCABULARY_ID": "Condition Type",
+                            "CONCEPT_NAME": "Inpatient header - primary",
+                            "DOMAIN_ID": "Type Concept",
+                            "STANDARD_CONCEPT_CAPTION": "Unknown",
+                            "CONCEPT_CLASS_ID": null,
+                            "INVALID_REASON": null
+                          },
+                          {
+                            "INVALID_REASON_CAPTION": "Unknown",
+                            "CONCEPT_ID": 44786627,
+                            "STANDARD_CONCEPT": null,
+                            "CONCEPT_CODE": "OMOP4822127",
+                            "VOCABULARY_ID": "Condition Type",
+                            "CONCEPT_NAME": "Primary Condition",
+                            "DOMAIN_ID": "Type Concept",
+                            "STANDARD_CONCEPT_CAPTION": "Unknown",
+                            "CONCEPT_CLASS_ID": null,
+                            "INVALID_REASON": null
+                          },
+                          {
+                            "INVALID_REASON_CAPTION": "Unknown",
+                            "CONCEPT_ID": 44786628,
+                            "STANDARD_CONCEPT": null,
+                            "CONCEPT_CODE": "OMOP4822128",
+                            "VOCABULARY_ID": "Condition Type",
+                            "CONCEPT_NAME": "First Position Condition",
+                            "DOMAIN_ID": "Type Concept",
+                            "STANDARD_CONCEPT_CAPTION": "Unknown",
+                            "CONCEPT_CLASS_ID": null,
+                            "INVALID_REASON": null
+                          }
+                        ],
+                        "ConditionSourceConcept": null,
+                        "StopReason": null,
+                        "Age": null
+                      }},
+                      "Occurrence": {
+                        "Type": 2,
+                        "IsDistinct": false,
+                        "Count": 1
+                      }
+                    }],
+                    "Type": "ALL",
+                    "DemographicCriteriaList": [],
+                    "Groups": [],
+                    "Count": null
+                  },
+                  "VisitSourceConcept": null,
+                  "CodesetId": null,
+                  "VisitTypeExclude": false,
+                  "ProviderSpecialty": null,
+                  "Gender": null,
+                  "PlaceOfServiceLocation": null,
+                  "PlaceOfService": null,
+                  "VisitType": null,
+                  "First": null,
+                  "OccurrenceStartDate": null,
+                  "Age": null
+                }},
+                "Occurrence": {
+                  "Type": 2,
+                  "IsDistinct": false,
+                  "Count": 4
+                }
+              }],
+              "Type": "ALL",
+              "DemographicCriteriaList": [],
+              "Groups": [],
+              "Count": null
+            },
+            "name": "Primary diagnosis with cancer 4 times or more within 180 days",
+            "description": null
+          }
+        ],
+        "PrimaryCriteria": {
+          "CriteriaList": [
+            {"Measurement": {
+              "Operator": null,
+              "RangeHigh": null,
+              "MeasurementTypeExclude": false,
+              "ValueAsConcept": null,
+              "CorrelatedCriteria": null,
+              "RangeHighRatio": null,
+              "CodesetId": 2,
+              "ProviderSpecialty": null,
+              "Gender": null,
+              "Unit": null,
+              "RangeLowRatio": null,
+              "MeasurementType": null,
+              "MeasurementSourceConcept": null,
+              "VisitType": null,
+              "ValueAsNumber": null,
+              "First": null,
+              "OccurrenceStartDate": null,
+              "RangeLow": null,
+              "Abnormal": null,
+              "Age": null
+            }},
+            {"Observation": {
+              "ValueAsConcept": null,
+              "ObservationType": null,
+              "CorrelatedCriteria": null,
+              "ObservationTypeExclude": false,
+              "ValueAsString": null,
+              "CodesetId": 2,
+              "ProviderSpecialty": null,
+              "Gender": null,
+              "Unit": null,
+              "ObservationSourceConcept": null,
+              "VisitType": null,
+              "ValueAsNumber": null,
+              "Qualifier": null,
+              "First": null,
+              "OccurrenceStartDate": null,
+              "Age": null
+            }}
+          ],
+          "PrimaryCriteriaLimit": {"Type": "All"},
+          "ObservationWindow": {
+            "PostDays": 0,
+            "PriorDays": 0
+          }
+        }
+      },
+      "createdDate": "2020-04-24T06:47:10.499+0000",
+      "createdBy": null,
+      "name": "[SCY] Persons with a COVID-19 test and positive result and active cancer age>=18 and requiring prior observation",
+      "modifiedDate": "2020-04-28T23:05:55.020+0000",
+      "description": "Measurement or observation for COVID-19 test and positive result.   Records within 30d are presumed to be part of same episode.",
+      "expressionType": "SIMPLE_EXPRESSION",
+      "modifiedBy": null,
+      "id": 694
+    },
+    {
+      "expression": {
+        "ExpressionLimit": {"Type": "First"},
+        "CollapseSettings": {
+          "CollapseType": "ERA",
+          "EraPad": 0
+        },
+        "CensorWindow": {
+          "StartDate": null,
+          "EndDate": null
+        },
+        "ConceptSets": [
+          {
+            "expression": {"items": [{
+              "isExcluded": false,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_ID": 37310282,
+                "STANDARD_CONCEPT": "S",
+                "CONCEPT_CODE": "1240581000000104",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "2019 novel coronavirus detected",
+                "DOMAIN_ID": "Measurement",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "CONCEPT_CLASS_ID": "Clinical Finding",
+                "INVALID_REASON": "V"
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            }]},
+            "name": "COVID-19 specific testing (pre-coordinated Measurements) - Positive",
+            "id": 1
+          },
+          {
+            "expression": {"items": [
+              {
+                "isExcluded": true,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 37310282,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "1240581000000104",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "2019 novel coronavirus detected",
+                  "DOMAIN_ID": "Measurement",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Clinical Finding",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": true,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 37310281,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "1240591000000102",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "2019 novel coronavirus not detected",
+                  "DOMAIN_ID": "Measurement",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Clinical Finding",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 756055,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "OMOP4873969",
+                  "VOCABULARY_ID": "OMOP Extension",
+                  "CONCEPT_NAME": "Measurement of severe acute respiratory syndrome coronavirus 2",
+                  "DOMAIN_ID": "Measurement",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Procedure",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              }
+            ]},
+            "name": "COVID-19 specific testing (pre-coordinated Measurements excluded)",
+            "id": 2
+          },
+          {
+            "expression": {"items": [{
+              "isExcluded": false,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_ID": 37311061,
+                "STANDARD_CONCEPT": "S",
+                "CONCEPT_CODE": "840539006",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "Disease caused by severe acute respiratory syndrome coronavirus 2",
+                "DOMAIN_ID": "Condition",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "CONCEPT_CLASS_ID": "Clinical Finding",
+                "INVALID_REASON": "V"
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            }]},
+            "name": "COVID-19 (including asymptomatic)",
+            "id": 3
+          },
+          {
+            "expression": {"items": [
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 443392,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "363346000",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Malignant neoplastic disease",
+                  "DOMAIN_ID": "Condition",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Clinical Finding",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": true,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 4178976,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "363478007",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Malignant tumor of thyroid gland",
+                  "DOMAIN_ID": "Condition",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Clinical Finding",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": true,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 4201622,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "315007008",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Metastasis from malignant tumor of thyroid",
+                  "DOMAIN_ID": "Condition",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Clinical Finding",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": false
+              },
+              {
+                "isExcluded": true,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 36717298,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "13351431000119102",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Secondary malignant neoplasm of lymph nodes of neck from thyroid",
+                  "DOMAIN_ID": "Condition",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Clinical Finding",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": false
+              },
+              {
+                "isExcluded": true,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 4179980,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "429114002",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Malignant basal cell neoplasm of skin",
+                  "DOMAIN_ID": "Condition",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Clinical Finding",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": true,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 4111921,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "254651007",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Squamous cell carcinoma of skin",
+                  "DOMAIN_ID": "Condition",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Clinical Finding",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              }
+            ]},
+            "name": "Malignant neoplasm except thyroid cancer and non-melanoma skin cancer",
+            "id": 4
+          }
+        ],
+        "cdmVersionRange": ">=5.0.0",
+        "CensoringCriteria": [],
+        "QualifiedLimit": {"Type": "All"},
+        "InclusionRules": [
+          {
+            "expression": {
+              "CriteriaList": [],
+              "Type": "ALL",
+              "DemographicCriteriaList": [{
+                "Ethnicity": null,
+                "OccurrenceEndDate": null,
+                "Race": null,
+                "Gender": null,
+                "OccurrenceStartDate": null,
+                "Age": {
+                  "Op": "gte",
+                  "Extent": null,
+                  "Value": 18
+                }
+              }],
+              "Groups": [],
+              "Count": null
+            },
+            "name": "age >=18",
+            "description": null
+          },
+          {
+            "expression": {
+              "CriteriaList": [{
+                "RestrictVisit": false,
+                "StartWindow": {
+                  "UseEventEnd": false,
+                  "Start": {
+                    "Days": null,
+                    "Coeff": -1
+                  },
+                  "End": {
+                    "Days": 365,
+                    "Coeff": -1
+                  },
+                  "UseIndexEnd": false
+                },
+                "IgnoreObservationPeriod": false,
+                "EndWindow": {
+                  "UseEventEnd": true,
+                  "Start": {
+                    "Days": 0,
+                    "Coeff": -1
+                  },
+                  "End": {
+                    "Days": null,
+                    "Coeff": 1
+                  },
+                  "UseIndexEnd": true
+                },
+                "Criteria": {"ObservationPeriod": {
+                  "PeriodType": null,
+                  "CorrelatedCriteria": null,
+                  "AgeAtStart": null,
+                  "UserDefinedPeriod": null,
+                  "AgeAtEnd": null,
+                  "First": null,
+                  "PeriodEndDate": null,
+                  "PeriodStartDate": null,
+                  "PeriodLength": null
+                }},
+                "Occurrence": {
+                  "Type": 2,
+                  "IsDistinct": false,
+                  "Count": 1
+                }
+              }],
+              "Type": "ALL",
+              "DemographicCriteriaList": [],
+              "Groups": [],
+              "Count": null
+            },
+            "name": "has >=365d of prior observation",
+            "description": null
+          },
+          {
+            "expression": {
+              "CriteriaList": [
+                {
+                  "RestrictVisit": false,
+                  "StartWindow": {
+                    "UseEventEnd": false,
+                    "Start": {
+                      "Days": null,
+                      "Coeff": -1
+                    },
+                    "End": {
+                      "Days": 14,
+                      "Coeff": 1
+                    },
+                    "UseIndexEnd": false
+                  },
+                  "IgnoreObservationPeriod": false,
+                  "EndWindow": null,
+                  "Criteria": {"Measurement": {
+                    "Operator": null,
+                    "RangeHigh": null,
+                    "MeasurementTypeExclude": false,
+                    "ValueAsConcept": null,
+                    "CorrelatedCriteria": null,
+                    "RangeHighRatio": null,
+                    "CodesetId": 1,
+                    "ProviderSpecialty": null,
+                    "Gender": null,
+                    "Unit": null,
+                    "RangeLowRatio": null,
+                    "MeasurementType": null,
+                    "MeasurementSourceConcept": null,
+                    "VisitType": null,
+                    "ValueAsNumber": null,
+                    "First": null,
+                    "OccurrenceStartDate": null,
+                    "RangeLow": null,
+                    "Abnormal": null,
+                    "Age": null
+                  }},
+                  "Occurrence": {
+                    "Type": 0,
+                    "IsDistinct": false,
+                    "Count": 0
+                  }
+                },
+                {
+                  "RestrictVisit": false,
+                  "StartWindow": {
+                    "UseEventEnd": false,
+                    "Start": {
+                      "Days": null,
+                      "Coeff": -1
+                    },
+                    "End": {
+                      "Days": 14,
+                      "Coeff": 1
+                    },
+                    "UseIndexEnd": false
+                  },
+                  "IgnoreObservationPeriod": false,
+                  "EndWindow": null,
+                  "Criteria": {"Measurement": {
+                    "Operator": null,
+                    "RangeHigh": null,
+                    "MeasurementTypeExclude": false,
+                    "ValueAsConcept": [
+                      {
+                        "INVALID_REASON_CAPTION": "Unknown",
+                        "CONCEPT_ID": 4126681,
+                        "STANDARD_CONCEPT": null,
+                        "CONCEPT_CODE": "260373001",
+                        "VOCABULARY_ID": "SNOMED",
+                        "CONCEPT_NAME": "Detected",
+                        "DOMAIN_ID": "Meas Value",
+                        "STANDARD_CONCEPT_CAPTION": "Unknown",
+                        "CONCEPT_CLASS_ID": null,
+                        "INVALID_REASON": null
+                      },
+                      {
+                        "INVALID_REASON_CAPTION": "Unknown",
+                        "CONCEPT_ID": 45877985,
+                        "STANDARD_CONCEPT": null,
+                        "CONCEPT_CODE": "LA11882-0",
+                        "VOCABULARY_ID": "LOINC",
+                        "CONCEPT_NAME": "Detected",
+                        "DOMAIN_ID": "Meas Value",
+                        "STANDARD_CONCEPT_CAPTION": "Unknown",
+                        "CONCEPT_CLASS_ID": null,
+                        "INVALID_REASON": null
+                      },
+                      {
+                        "INVALID_REASON_CAPTION": "Unknown",
+                        "CONCEPT_ID": 9191,
+                        "STANDARD_CONCEPT": null,
+                        "CONCEPT_CODE": "10828004",
+                        "VOCABULARY_ID": "SNOMED",
+                        "CONCEPT_NAME": "Positive",
+                        "DOMAIN_ID": "Meas Value",
+                        "STANDARD_CONCEPT_CAPTION": "Unknown",
+                        "CONCEPT_CLASS_ID": null,
+                        "INVALID_REASON": null
+                      },
+                      {
+                        "INVALID_REASON_CAPTION": "Unknown",
+                        "CONCEPT_ID": 45884084,
+                        "STANDARD_CONCEPT": null,
+                        "CONCEPT_CODE": "LA6576-8",
+                        "VOCABULARY_ID": "LOINC",
+                        "CONCEPT_NAME": "Positive",
+                        "DOMAIN_ID": "Meas Value",
+                        "STANDARD_CONCEPT_CAPTION": "Unknown",
+                        "CONCEPT_CLASS_ID": null,
+                        "INVALID_REASON": null
+                      },
+                      {
+                        "INVALID_REASON_CAPTION": "Unknown",
+                        "CONCEPT_ID": 4181412,
+                        "STANDARD_CONCEPT": null,
+                        "CONCEPT_CODE": "52101004",
+                        "VOCABULARY_ID": "SNOMED",
+                        "CONCEPT_NAME": "Present",
+                        "DOMAIN_ID": "Meas Value",
+                        "STANDARD_CONCEPT_CAPTION": "Unknown",
+                        "CONCEPT_CLASS_ID": null,
+                        "INVALID_REASON": null
+                      },
+                      {
+                        "INVALID_REASON_CAPTION": "Unknown",
+                        "CONCEPT_ID": 45879438,
+                        "STANDARD_CONCEPT": null,
+                        "CONCEPT_CODE": "LA9633-4",
+                        "VOCABULARY_ID": "LOINC",
+                        "CONCEPT_NAME": "Present",
+                        "DOMAIN_ID": "Meas Value",
+                        "STANDARD_CONCEPT_CAPTION": "Unknown",
+                        "CONCEPT_CLASS_ID": null,
+                        "INVALID_REASON": null
+                      }
+                    ],
+                    "CorrelatedCriteria": null,
+                    "RangeHighRatio": null,
+                    "CodesetId": 2,
+                    "ProviderSpecialty": null,
+                    "Gender": null,
+                    "Unit": null,
+                    "RangeLowRatio": null,
+                    "MeasurementType": null,
+                    "MeasurementSourceConcept": null,
+                    "VisitType": null,
+                    "ValueAsNumber": null,
+                    "First": null,
+                    "OccurrenceStartDate": null,
+                    "RangeLow": null,
+                    "Abnormal": null,
+                    "Age": null
+                  }},
+                  "Occurrence": {
+                    "Type": 0,
+                    "IsDistinct": false,
+                    "Count": 0
+                  }
+                },
+                {
+                  "RestrictVisit": false,
+                  "StartWindow": {
+                    "UseEventEnd": false,
+                    "Start": {
+                      "Days": null,
+                      "Coeff": -1
+                    },
+                    "End": {
+                      "Days": 14,
+                      "Coeff": 1
+                    },
+                    "UseIndexEnd": false
+                  },
+                  "IgnoreObservationPeriod": false,
+                  "EndWindow": null,
+                  "Criteria": {"Observation": {
+                    "ValueAsConcept": [
+                      {
+                        "INVALID_REASON_CAPTION": "Unknown",
+                        "CONCEPT_ID": 4126681,
+                        "STANDARD_CONCEPT": null,
+                        "CONCEPT_CODE": "260373001",
+                        "VOCABULARY_ID": "SNOMED",
+                        "CONCEPT_NAME": "Detected",
+                        "DOMAIN_ID": "Meas Value",
+                        "STANDARD_CONCEPT_CAPTION": "Unknown",
+                        "CONCEPT_CLASS_ID": null,
+                        "INVALID_REASON": null
+                      },
+                      {
+                        "INVALID_REASON_CAPTION": "Unknown",
+                        "CONCEPT_ID": 45877985,
+                        "STANDARD_CONCEPT": null,
+                        "CONCEPT_CODE": "LA11882-0",
+                        "VOCABULARY_ID": "LOINC",
+                        "CONCEPT_NAME": "Detected",
+                        "DOMAIN_ID": "Meas Value",
+                        "STANDARD_CONCEPT_CAPTION": "Unknown",
+                        "CONCEPT_CLASS_ID": null,
+                        "INVALID_REASON": null
+                      },
+                      {
+                        "INVALID_REASON_CAPTION": "Unknown",
+                        "CONCEPT_ID": 9191,
+                        "STANDARD_CONCEPT": null,
+                        "CONCEPT_CODE": "10828004",
+                        "VOCABULARY_ID": "SNOMED",
+                        "CONCEPT_NAME": "Positive",
+                        "DOMAIN_ID": "Meas Value",
+                        "STANDARD_CONCEPT_CAPTION": "Unknown",
+                        "CONCEPT_CLASS_ID": null,
+                        "INVALID_REASON": null
+                      },
+                      {
+                        "INVALID_REASON_CAPTION": "Unknown",
+                        "CONCEPT_ID": 45884084,
+                        "STANDARD_CONCEPT": null,
+                        "CONCEPT_CODE": "LA6576-8",
+                        "VOCABULARY_ID": "LOINC",
+                        "CONCEPT_NAME": "Positive",
+                        "DOMAIN_ID": "Meas Value",
+                        "STANDARD_CONCEPT_CAPTION": "Unknown",
+                        "CONCEPT_CLASS_ID": null,
+                        "INVALID_REASON": null
+                      },
+                      {
+                        "INVALID_REASON_CAPTION": "Unknown",
+                        "CONCEPT_ID": 4181412,
+                        "STANDARD_CONCEPT": null,
+                        "CONCEPT_CODE": "52101004",
+                        "VOCABULARY_ID": "SNOMED",
+                        "CONCEPT_NAME": "Present",
+                        "DOMAIN_ID": "Meas Value",
+                        "STANDARD_CONCEPT_CAPTION": "Unknown",
+                        "CONCEPT_CLASS_ID": null,
+                        "INVALID_REASON": null
+                      },
+                      {
+                        "INVALID_REASON_CAPTION": "Unknown",
+                        "CONCEPT_ID": 45879438,
+                        "STANDARD_CONCEPT": null,
+                        "CONCEPT_CODE": "LA9633-4",
+                        "VOCABULARY_ID": "LOINC",
+                        "CONCEPT_NAME": "Present",
+                        "DOMAIN_ID": "Meas Value",
+                        "STANDARD_CONCEPT_CAPTION": "Unknown",
+                        "CONCEPT_CLASS_ID": null,
+                        "INVALID_REASON": null
+                      }
+                    ],
+                    "ObservationType": null,
+                    "CorrelatedCriteria": null,
+                    "ObservationTypeExclude": false,
+                    "ValueAsString": null,
+                    "CodesetId": 2,
+                    "ProviderSpecialty": null,
+                    "Gender": null,
+                    "Unit": null,
+                    "ObservationSourceConcept": null,
+                    "VisitType": null,
+                    "ValueAsNumber": null,
+                    "Qualifier": null,
+                    "First": null,
+                    "OccurrenceStartDate": null,
+                    "Age": null
+                  }},
+                  "Occurrence": {
+                    "Type": 0,
+                    "IsDistinct": false,
+                    "Count": 0
+                  }
+                },
+                {
+                  "RestrictVisit": false,
+                  "StartWindow": {
+                    "UseEventEnd": false,
+                    "Start": {
+                      "Days": null,
+                      "Coeff": -1
+                    },
+                    "End": {
+                      "Days": 14,
+                      "Coeff": 1
+                    },
+                    "UseIndexEnd": false
+                  },
+                  "IgnoreObservationPeriod": false,
+                  "EndWindow": null,
+                  "Criteria": {"ConditionOccurrence": {
+                    "OccurrenceEndDate": null,
+                    "CorrelatedCriteria": null,
+                    "ConditionTypeExclude": false,
+                    "CodesetId": 3,
+                    "ProviderSpecialty": null,
+                    "Gender": null,
+                    "VisitType": null,
+                    "First": null,
+                    "OccurrenceStartDate": null,
+                    "ConditionType": null,
+                    "ConditionSourceConcept": null,
+                    "StopReason": null,
+                    "Age": null
+                  }},
+                  "Occurrence": {
+                    "Type": 0,
+                    "IsDistinct": false,
+                    "Count": 0
+                  }
+                }
+              ],
+              "Type": "ALL",
+              "DemographicCriteriaList": [],
+              "Groups": [],
+              "Count": null
+            },
+            "name": "No positive test result or diagnosis for COVID-19 within 14 days",
+            "description": "No positive test result or diagnosis for COVID-19 within 14 days"
+          },
+          {
+            "expression": {
+              "CriteriaList": [{
+                "RestrictVisit": false,
+                "StartWindow": {
+                  "UseEventEnd": false,
+                  "Start": {
+                    "Days": 1825,
+                    "Coeff": -1
+                  },
+                  "End": {
+                    "Days": null,
+                    "Coeff": 1
+                  },
+                  "UseIndexEnd": false
+                },
+                "IgnoreObservationPeriod": false,
+                "EndWindow": null,
+                "Criteria": {"ConditionOccurrence": {
+                  "OccurrenceEndDate": null,
+                  "CorrelatedCriteria": null,
+                  "ConditionTypeExclude": false,
+                  "CodesetId": 4,
+                  "ProviderSpecialty": null,
+                  "Gender": null,
+                  "VisitType": null,
+                  "First": true,
+                  "OccurrenceStartDate": null,
+                  "ConditionType": null,
+                  "ConditionSourceConcept": null,
+                  "StopReason": null,
+                  "Age": null
+                }},
+                "Occurrence": {
+                  "Type": 2,
+                  "IsDistinct": false,
+                  "Count": 1
+                }
+              }],
+              "Type": "ALL",
+              "DemographicCriteriaList": [],
+              "Groups": [],
+              "Count": null
+            },
+            "name": "First cancer diagnosis within 5 years",
+            "description": null
+          },
+          {
+            "expression": {
+              "CriteriaList": [{
+                "RestrictVisit": false,
+                "StartWindow": {
+                  "UseEventEnd": false,
+                  "Start": {
+                    "Days": 180,
+                    "Coeff": -1
+                  },
+                  "End": {
+                    "Days": 0,
+                    "Coeff": 1
+                  },
+                  "UseIndexEnd": false
+                },
+                "IgnoreObservationPeriod": false,
+                "EndWindow": null,
+                "Criteria": {"VisitOccurrence": {
+                  "OccurrenceEndDate": null,
+                  "VisitLength": null,
+                  "CorrelatedCriteria": {
+                    "CriteriaList": [{
+                      "RestrictVisit": false,
+                      "StartWindow": {
+                        "UseEventEnd": false,
+                        "Start": {
+                          "Days": null,
+                          "Coeff": -1
+                        },
+                        "End": {
+                          "Days": null,
+                          "Coeff": 1
+                        },
+                        "UseIndexEnd": false
+                      },
+                      "IgnoreObservationPeriod": false,
+                      "EndWindow": null,
+                      "Criteria": {"ConditionOccurrence": {
+                        "OccurrenceEndDate": null,
+                        "CorrelatedCriteria": null,
+                        "ConditionTypeExclude": false,
+                        "CodesetId": 4,
+                        "ProviderSpecialty": null,
+                        "Gender": null,
+                        "VisitType": null,
+                        "First": null,
+                        "OccurrenceStartDate": null,
+                        "ConditionType": [
+                          {
+                            "INVALID_REASON_CAPTION": "Unknown",
+                            "CONCEPT_ID": 38000183,
+                            "STANDARD_CONCEPT": null,
+                            "CONCEPT_CODE": "OMOP4822059",
+                            "VOCABULARY_ID": "Condition Type",
+                            "CONCEPT_NAME": "Inpatient detail - primary",
+                            "DOMAIN_ID": "Type Concept",
+                            "STANDARD_CONCEPT_CAPTION": "Unknown",
+                            "CONCEPT_CLASS_ID": null,
+                            "INVALID_REASON": null
+                          },
+                          {
+                            "INVALID_REASON_CAPTION": "Unknown",
+                            "CONCEPT_ID": 38000199,
+                            "STANDARD_CONCEPT": null,
+                            "CONCEPT_CODE": "OMOP4822075",
+                            "VOCABULARY_ID": "Condition Type",
+                            "CONCEPT_NAME": "Inpatient header - primary",
+                            "DOMAIN_ID": "Type Concept",
+                            "STANDARD_CONCEPT_CAPTION": "Unknown",
+                            "CONCEPT_CLASS_ID": null,
+                            "INVALID_REASON": null
+                          },
+                          {
+                            "INVALID_REASON_CAPTION": "Unknown",
+                            "CONCEPT_ID": 44786627,
+                            "STANDARD_CONCEPT": null,
+                            "CONCEPT_CODE": "OMOP4822127",
+                            "VOCABULARY_ID": "Condition Type",
+                            "CONCEPT_NAME": "Primary Condition",
+                            "DOMAIN_ID": "Type Concept",
+                            "STANDARD_CONCEPT_CAPTION": "Unknown",
+                            "CONCEPT_CLASS_ID": null,
+                            "INVALID_REASON": null
+                          },
+                          {
+                            "INVALID_REASON_CAPTION": "Unknown",
+                            "CONCEPT_ID": 44786628,
+                            "STANDARD_CONCEPT": null,
+                            "CONCEPT_CODE": "OMOP4822128",
+                            "VOCABULARY_ID": "Condition Type",
+                            "CONCEPT_NAME": "First Position Condition",
+                            "DOMAIN_ID": "Type Concept",
+                            "STANDARD_CONCEPT_CAPTION": "Unknown",
+                            "CONCEPT_CLASS_ID": null,
+                            "INVALID_REASON": null
+                          }
+                        ],
+                        "ConditionSourceConcept": null,
+                        "StopReason": null,
+                        "Age": null
+                      }},
+                      "Occurrence": {
+                        "Type": 2,
+                        "IsDistinct": false,
+                        "Count": 1
+                      }
+                    }],
+                    "Type": "ALL",
+                    "DemographicCriteriaList": [],
+                    "Groups": [],
+                    "Count": null
+                  },
+                  "VisitSourceConcept": null,
+                  "CodesetId": null,
+                  "VisitTypeExclude": false,
+                  "ProviderSpecialty": null,
+                  "Gender": null,
+                  "PlaceOfServiceLocation": null,
+                  "PlaceOfService": null,
+                  "VisitType": null,
+                  "First": null,
+                  "OccurrenceStartDate": null,
+                  "Age": null
+                }},
+                "Occurrence": {
+                  "Type": 2,
+                  "IsDistinct": false,
+                  "Count": 4
+                }
+              }],
+              "Type": "ALL",
+              "DemographicCriteriaList": [],
+              "Groups": [],
+              "Count": null
+            },
+            "name": "Primary diagnosis with cancer 4 times or more within 180 days",
+            "description": null
+          }
+        ],
+        "PrimaryCriteria": {
+          "CriteriaList": [
+            {"Measurement": {
+              "Operator": null,
+              "RangeHigh": null,
+              "MeasurementTypeExclude": false,
+              "ValueAsConcept": null,
+              "CorrelatedCriteria": null,
+              "RangeHighRatio": null,
+              "CodesetId": 2,
+              "ProviderSpecialty": null,
+              "Gender": null,
+              "Unit": null,
+              "RangeLowRatio": null,
+              "MeasurementType": null,
+              "MeasurementSourceConcept": null,
+              "VisitType": null,
+              "ValueAsNumber": null,
+              "First": null,
+              "OccurrenceStartDate": null,
+              "RangeLow": null,
+              "Abnormal": null,
+              "Age": null
+            }},
+            {"Observation": {
+              "ValueAsConcept": null,
+              "ObservationType": null,
+              "CorrelatedCriteria": null,
+              "ObservationTypeExclude": false,
+              "ValueAsString": null,
+              "CodesetId": 2,
+              "ProviderSpecialty": null,
+              "Gender": null,
+              "Unit": null,
+              "ObservationSourceConcept": null,
+              "VisitType": null,
+              "ValueAsNumber": null,
+              "Qualifier": null,
+              "First": null,
+              "OccurrenceStartDate": null,
+              "Age": null
+            }}
+          ],
+          "PrimaryCriteriaLimit": {"Type": "All"},
+          "ObservationWindow": {
+            "PostDays": 0,
+            "PriorDays": 0
+          }
+        }
+      },
+      "createdDate": "2020-04-28T23:06:27.469+0000",
+      "createdBy": null,
+      "name": "[SCY] Persons with a COVID-19 test and no positive result and active cancer age>=18 and requiring prior observation",
+      "modifiedDate": "2020-04-28T23:07:46.186+0000",
+      "description": "Measurement or observation for COVID-19 test and negative result within 14 days.   Records within 30d are presumed to be part of same episode.",
+      "expressionType": "SIMPLE_EXPRESSION",
+      "modifiedBy": null,
+      "id": 697
+    },
+    {
+      "expression": {
+        "ExpressionLimit": {"Type": "First"},
+        "CollapseSettings": {
+          "CollapseType": "ERA",
+          "EraPad": 0
+        },
+        "CensorWindow": {
+          "StartDate": null,
+          "EndDate": null
+        },
+        "ConceptSets": [],
+        "cdmVersionRange": ">=5.0.0",
+        "CensoringCriteria": [],
+        "QualifiedLimit": {"Type": "First"},
+        "InclusionRules": [],
+        "PrimaryCriteria": {
+          "CriteriaList": [{"Death": {
+            "CorrelatedCriteria": null,
+            "CodesetId": null,
+            "DeathSourceConcept": null,
+            "DeathTypeExclude": false,
+            "DeathType": null,
+            "OccurrenceStartDate": null,
+            "Gender": null,
+            "Age": null
+          }}],
+          "PrimaryCriteriaLimit": {"Type": "First"},
+          "ObservationWindow": {
+            "PostDays": 0,
+            "PriorDays": 0
+          }
+        }
+      },
+      "createdDate": "2020-03-26T13:14:42.420+0000",
+      "createdBy": null,
+      "name": "All-cause mortality",
+      "modifiedDate": null,
+      "description": null,
+      "expressionType": null,
+      "modifiedBy": null,
+      "id": 58
+    }
+  ],
+  "name": "Test with positive result vs test without positive result in cancer",
+  "modifiedDate": null,
+  "modifiedBy": null,
+  "conceptSets": [{
+    "expression": {"items": [
+      {
+        "isExcluded": false,
+        "concept": {
+          "INVALID_REASON_CAPTION": "Valid",
+          "CONCEPT_ID": 378256,
+          "STANDARD_CONCEPT": "S",
+          "CONCEPT_CODE": "46670006",
+          "VOCABULARY_ID": "SNOMED",
+          "CONCEPT_NAME": "Abnormal reflex",
+          "DOMAIN_ID": "Condition",
+          "STANDARD_CONCEPT_CAPTION": "Standard",
+          "CONCEPT_CLASS_ID": "Clinical Finding",
+          "INVALID_REASON": "V"
+        },
+        "includeMapped": false,
+        "includeDescendants": false
+      },
+      {
+        "isExcluded": false,
+        "concept": {
+          "INVALID_REASON_CAPTION": "Valid",
+          "CONCEPT_ID": 4092879,
+          "STANDARD_CONCEPT": "S",
+          "CONCEPT_CODE": "249582007",
+          "VOCABULARY_ID": "SNOMED",
+          "CONCEPT_NAME": "Absent kidney",
+          "DOMAIN_ID": "Condition",
+          "STANDARD_CONCEPT_CAPTION": "Standard",
+          "CONCEPT_CLASS_ID": "Clinical Finding",
+          "INVALID_REASON": "V"
+        },
+        "includeMapped": false,
+        "includeDescendants": false
+      },
+      {
+        "isExcluded": false,
+        "concept": {
+          "INVALID_REASON_CAPTION": "Valid",
+          "CONCEPT_ID": 433753,
+          "STANDARD_CONCEPT": "S",
+          "CONCEPT_CODE": "15167005",
+          "VOCABULARY_ID": "SNOMED",
+          "CONCEPT_NAME": "Alcohol abuse",
+          "DOMAIN_ID": "Condition",
+          "STANDARD_CONCEPT_CAPTION": "Standard",
+          "CONCEPT_CLASS_ID": "Clinical Finding",
+          "INVALID_REASON": "V"
+        },
+        "includeMapped": false,
+        "includeDescendants": false
+      },
+      {
+        "isExcluded": false,
+        "concept": {
+          "INVALID_REASON_CAPTION": "Valid",
+          "CONCEPT_ID": 321689,
+          "STANDARD_CONCEPT": "S",
+          "CONCEPT_CODE": "1023001",
+          "VOCABULARY_ID": "SNOMED",
+          "CONCEPT_NAME": "Apnea",
+          "DOMAIN_ID": "Condition",
+          "STANDARD_CONCEPT_CAPTION": "Standard",
+          "CONCEPT_CLASS_ID": "Clinical Finding",
+          "INVALID_REASON": "V"
+        },
+        "includeMapped": false,
+        "includeDescendants": false
+      },
+      {
+        "isExcluded": false,
+        "concept": {
+          "INVALID_REASON_CAPTION": "Valid",
+          "CONCEPT_ID": 78200,
+          "STANDARD_CONCEPT": "S",
+          "CONCEPT_CODE": "57993004",
+          "VOCABULARY_ID": "SNOMED",
+          "CONCEPT_NAME": "Benign mammary dysplasia",
+          "DOMAIN_ID": "Condition",
+          "STANDARD_CONCEPT_CAPTION": "Standard",
+          "CONCEPT_CLASS_ID": "Clinical Finding",
+          "INVALID_REASON": "V"
+        },
+        "includeMapped": false,
+        "includeDescendants": false
+      },
+      {
+        "isExcluded": false,
+        "concept": {
+          "INVALID_REASON_CAPTION": "Valid",
+          "CONCEPT_ID": 4195873,
+          "STANDARD_CONCEPT": "S",
+          "CONCEPT_CODE": "79879001",
+          "VOCABULARY_ID": "SNOMED",
+          "CONCEPT_NAME": "Breath smells unpleasant",
+          "DOMAIN_ID": "Condition",
+          "STANDARD_CONCEPT_CAPTION": "Standard",
+          "CONCEPT_CLASS_ID": "Clinical Finding",
+          "INVALID_REASON": "V"
+        },
+        "includeMapped": false,
+        "includeDescendants": false
+      },
+      {
+        "isExcluded": false,
+        "concept": {
+          "INVALID_REASON_CAPTION": "Valid",
+          "CONCEPT_ID": 443792,
+          "STANDARD_CONCEPT": "S",
+          "CONCEPT_CODE": "30093007",
+          "VOCABULARY_ID": "SNOMED",
+          "CONCEPT_NAME": "Calculus of bile duct",
+          "DOMAIN_ID": "Condition",
+          "STANDARD_CONCEPT_CAPTION": "Standard",
+          "CONCEPT_CLASS_ID": "Clinical Finding",
+          "INVALID_REASON": "V"
+        },
+        "includeMapped": false,
+        "includeDescendants": false
+      },
+      {
+        "isExcluded": false,
+        "concept": {
+          "INVALID_REASON_CAPTION": "Valid",
+          "CONCEPT_ID": 434327,
+          "STANDARD_CONCEPT": "S",
+          "CONCEPT_CODE": "37344009",
+          "VOCABULARY_ID": "SNOMED",
+          "CONCEPT_NAME": "Cannabis abuse",
+          "DOMAIN_ID": "Condition",
+          "STANDARD_CONCEPT_CAPTION": "Standard",
+          "CONCEPT_CLASS_ID": "Clinical Finding",
+          "INVALID_REASON": "V"
+        },
+        "includeMapped": false,
+        "includeDescendants": false
+      },
+      {
+        "isExcluded": false,
+        "concept": {
+          "INVALID_REASON_CAPTION": "Valid",
+          "CONCEPT_ID": 197318,
+          "STANDARD_CONCEPT": "S",
+          "CONCEPT_CODE": "61565001",
+          "VOCABULARY_ID": "SNOMED",
+          "CONCEPT_NAME": "Cholesterolosis of gallbladder",
+          "DOMAIN_ID": "Condition",
+          "STANDARD_CONCEPT_CAPTION": "Standard",
+          "CONCEPT_CLASS_ID": "Clinical Finding",
+          "INVALID_REASON": "V"
+        },
+        "includeMapped": false,
+        "includeDescendants": false
+      },
+      {
+        "isExcluded": false,
+        "concept": {
+          "INVALID_REASON_CAPTION": "Valid",
+          "CONCEPT_ID": 432303,
+          "STANDARD_CONCEPT": "S",
+          "CONCEPT_CODE": "78267003",
+          "VOCABULARY_ID": "SNOMED",
+          "CONCEPT_NAME": "Cocaine abuse",
+          "DOMAIN_ID": "Condition",
+          "STANDARD_CONCEPT_CAPTION": "Standard",
+          "CONCEPT_CLASS_ID": "Clinical Finding",
+          "INVALID_REASON": "V"
+        },
+        "includeMapped": false,
+        "includeDescendants": false
+      },
+      {
+        "isExcluded": false,
+        "concept": {
+          "INVALID_REASON_CAPTION": "Valid",
+          "CONCEPT_ID": 439125,
+          "STANDARD_CONCEPT": "S",
+          "CONCEPT_CODE": "41040004",
+          "VOCABULARY_ID": "SNOMED",
+          "CONCEPT_NAME": "Complete trisomy 21 syndrome",
+          "DOMAIN_ID": "Condition",
+          "STANDARD_CONCEPT_CAPTION": "Standard",
+          "CONCEPT_CLASS_ID": "Clinical Finding",
+          "INVALID_REASON": "V"
+        },
+        "includeMapped": false,
+        "includeDescendants": false
+      },
+      {
+        "isExcluded": false,
+        "concept": {
+          "INVALID_REASON_CAPTION": "Valid",
+          "CONCEPT_ID": 433270,
+          "STANDARD_CONCEPT": "S",
+          "CONCEPT_CODE": "11209007",
+          "VOCABULARY_ID": "SNOMED",
+          "CONCEPT_NAME": "Cord entanglement without compression",
+          "DOMAIN_ID": "Condition",
+          "STANDARD_CONCEPT_CAPTION": "Standard",
+          "CONCEPT_CLASS_ID": "Clinical Finding",
+          "INVALID_REASON": "V"
+        },
+        "includeMapped": false,
+        "includeDescendants": false
+      },
+      {
+        "isExcluded": false,
+        "concept": {
+          "INVALID_REASON_CAPTION": "Valid",
+          "CONCEPT_ID": 4311591,
+          "STANDARD_CONCEPT": "S",
+          "CONCEPT_CODE": "424647005",
+          "VOCABULARY_ID": "SNOMED",
+          "CONCEPT_NAME": "Cramp in limb",
+          "DOMAIN_ID": "Condition",
+          "STANDARD_CONCEPT_CAPTION": "Standard",
+          "CONCEPT_CLASS_ID": "Clinical Finding",
+          "INVALID_REASON": "V"
+        },
+        "includeMapped": false,
+        "includeDescendants": false
+      },
+      {
+        "isExcluded": false,
+        "concept": {
+          "INVALID_REASON_CAPTION": "Valid",
+          "CONCEPT_ID": 441267,
+          "STANDARD_CONCEPT": "S",
+          "CONCEPT_CODE": "190905008",
+          "VOCABULARY_ID": "SNOMED",
+          "CONCEPT_NAME": "Cystic fibrosis",
+          "DOMAIN_ID": "Condition",
+          "STANDARD_CONCEPT_CAPTION": "Standard",
+          "CONCEPT_CLASS_ID": "Clinical Finding",
+          "INVALID_REASON": "V"
+        },
+        "includeMapped": false,
+        "includeDescendants": false
+      },
+      {
+        "isExcluded": false,
+        "concept": {
+          "INVALID_REASON_CAPTION": "Valid",
+          "CONCEPT_ID": 40486120,
+          "STANDARD_CONCEPT": "S",
+          "CONCEPT_CODE": "447740001",
+          "VOCABULARY_ID": "SNOMED",
+          "CONCEPT_NAME": "Delay in physiological development",
+          "DOMAIN_ID": "Condition",
+          "STANDARD_CONCEPT_CAPTION": "Standard",
+          "CONCEPT_CLASS_ID": "Clinical Finding",
+          "INVALID_REASON": "V"
+        },
+        "includeMapped": false,
+        "includeDescendants": false
+      },
+      {
+        "isExcluded": false,
+        "concept": {
+          "INVALID_REASON_CAPTION": "Valid",
+          "CONCEPT_ID": 436233,
+          "STANDARD_CONCEPT": "S",
+          "CONCEPT_CODE": "274625009",
+          "VOCABULARY_ID": "SNOMED",
+          "CONCEPT_NAME": "Delayed milestone",
+          "DOMAIN_ID": "Condition",
+          "STANDARD_CONCEPT_CAPTION": "Standard",
+          "CONCEPT_CLASS_ID": "Clinical Finding",
+          "INVALID_REASON": "V"
+        },
+        "includeMapped": false,
+        "includeDescendants": false
+      },
+      {
+        "isExcluded": false,
+        "concept": {
+          "INVALID_REASON_CAPTION": "Valid",
+          "CONCEPT_ID": 439791,
+          "STANDARD_CONCEPT": "S",
+          "CONCEPT_CODE": "309838005",
+          "VOCABULARY_ID": "SNOMED",
+          "CONCEPT_NAME": "Emotional upset",
+          "DOMAIN_ID": "Condition",
+          "STANDARD_CONCEPT_CAPTION": "Standard",
+          "CONCEPT_CLASS_ID": "Clinical Finding",
+          "INVALID_REASON": "V"
+        },
+        "includeMapped": false,
+        "includeDescendants": false
+      },
+      {
+        "isExcluded": false,
+        "concept": {
+          "INVALID_REASON_CAPTION": "Valid",
+          "CONCEPT_ID": 374801,
+          "STANDARD_CONCEPT": "S",
+          "CONCEPT_CODE": "75441006",
+          "VOCABULARY_ID": "SNOMED",
+          "CONCEPT_NAME": "Foreign body in ear",
+          "DOMAIN_ID": "Condition",
+          "STANDARD_CONCEPT_CAPTION": "Standard",
+          "CONCEPT_CLASS_ID": "Clinical Finding",
+          "INVALID_REASON": "V"
+        },
+        "includeMapped": false,
+        "includeDescendants": false
+      },
+      {
+        "isExcluded": false,
+        "concept": {
+          "INVALID_REASON_CAPTION": "Valid",
+          "CONCEPT_ID": 259995,
+          "STANDARD_CONCEPT": "S",
+          "CONCEPT_CODE": "211616004",
+          "VOCABULARY_ID": "SNOMED",
+          "CONCEPT_NAME": "Foreign body in orifice",
+          "DOMAIN_ID": "Condition",
+          "STANDARD_CONCEPT_CAPTION": "Standard",
+          "CONCEPT_CLASS_ID": "Clinical Finding",
+          "INVALID_REASON": "V"
+        },
+        "includeMapped": false,
+        "includeDescendants": false
+      },
+      {
+        "isExcluded": false,
+        "concept": {
+          "INVALID_REASON_CAPTION": "Valid",
+          "CONCEPT_ID": 196456,
+          "STANDARD_CONCEPT": "S",
+          "CONCEPT_CODE": "235919008",
+          "VOCABULARY_ID": "SNOMED",
+          "CONCEPT_NAME": "Gallstone",
+          "DOMAIN_ID": "Condition",
+          "STANDARD_CONCEPT_CAPTION": "Standard",
+          "CONCEPT_CLASS_ID": "Clinical Finding",
+          "INVALID_REASON": "V"
+        },
+        "includeMapped": false,
+        "includeDescendants": false
+      },
+      {
+        "isExcluded": false,
+        "concept": {
+          "INVALID_REASON_CAPTION": "Valid",
+          "CONCEPT_ID": 4166231,
+          "STANDARD_CONCEPT": "S",
+          "CONCEPT_CODE": "47708004",
+          "VOCABULARY_ID": "SNOMED",
+          "CONCEPT_NAME": "Genetic predisposition",
+          "DOMAIN_ID": "Condition",
+          "STANDARD_CONCEPT_CAPTION": "Standard",
+          "CONCEPT_CLASS_ID": "Clinical Finding",
+          "INVALID_REASON": "V"
+        },
+        "includeMapped": false,
+        "includeDescendants": false
+      },
+      {
+        "isExcluded": false,
+        "concept": {
+          "INVALID_REASON_CAPTION": "Valid",
+          "CONCEPT_ID": 434164,
+          "STANDARD_CONCEPT": "S",
+          "CONCEPT_CODE": "45154002",
+          "VOCABULARY_ID": "SNOMED",
+          "CONCEPT_NAME": "Glycosuria",
+          "DOMAIN_ID": "Condition",
+          "STANDARD_CONCEPT_CAPTION": "Standard",
+          "CONCEPT_CLASS_ID": "Clinical Finding",
+          "INVALID_REASON": "V"
+        },
+        "includeMapped": false,
+        "includeDescendants": false
+      },
+      {
+        "isExcluded": false,
+        "concept": {
+          "INVALID_REASON_CAPTION": "Valid",
+          "CONCEPT_ID": 4163735,
+          "STANDARD_CONCEPT": "S",
+          "CONCEPT_CODE": "399187006",
+          "VOCABULARY_ID": "SNOMED",
+          "CONCEPT_NAME": "Hemochromatosis",
+          "DOMAIN_ID": "Condition",
+          "STANDARD_CONCEPT_CAPTION": "Standard",
+          "CONCEPT_CLASS_ID": "Clinical Finding",
+          "INVALID_REASON": "V"
+        },
+        "includeMapped": false,
+        "includeDescendants": false
+      },
+      {
+        "isExcluded": false,
+        "concept": {
+          "INVALID_REASON_CAPTION": "Valid",
+          "CONCEPT_ID": 439871,
+          "STANDARD_CONCEPT": "S",
+          "CONCEPT_CODE": "34615008",
+          "VOCABULARY_ID": "SNOMED",
+          "CONCEPT_NAME": "Hemospermia",
+          "DOMAIN_ID": "Condition",
+          "STANDARD_CONCEPT_CAPTION": "Standard",
+          "CONCEPT_CLASS_ID": "Clinical Finding",
+          "INVALID_REASON": "V"
+        },
+        "includeMapped": false,
+        "includeDescendants": false
+      },
+      {
+        "isExcluded": false,
+        "concept": {
+          "INVALID_REASON_CAPTION": "Valid",
+          "CONCEPT_ID": 4058388,
+          "STANDARD_CONCEPT": "S",
+          "CONCEPT_CODE": "19843006",
+          "VOCABULARY_ID": "SNOMED",
+          "CONCEPT_NAME": "Hypertrophic scar",
+          "DOMAIN_ID": "Condition",
+          "STANDARD_CONCEPT_CAPTION": "Standard",
+          "CONCEPT_CLASS_ID": "Clinical Finding",
+          "INVALID_REASON": "V"
+        },
+        "includeMapped": false,
+        "includeDescendants": false
+      },
+      {
+        "isExcluded": false,
+        "concept": {
+          "INVALID_REASON_CAPTION": "Valid",
+          "CONCEPT_ID": 435522,
+          "STANDARD_CONCEPT": "S",
+          "CONCEPT_CODE": "27712000",
+          "VOCABULARY_ID": "SNOMED",
+          "CONCEPT_NAME": "Hypervitaminosis D",
+          "DOMAIN_ID": "Condition",
+          "STANDARD_CONCEPT_CAPTION": "Standard",
+          "CONCEPT_CLASS_ID": "Clinical Finding",
+          "INVALID_REASON": "V"
+        },
+        "includeMapped": false,
+        "includeDescendants": false
+      },
+      {
+        "isExcluded": false,
+        "concept": {
+          "INVALID_REASON_CAPTION": "Valid",
+          "CONCEPT_ID": 443236,
+          "STANDARD_CONCEPT": "S",
+          "CONCEPT_CODE": "268640002",
+          "VOCABULARY_ID": "SNOMED",
+          "CONCEPT_NAME": "Hypnotic or anxiolytic dependence",
+          "DOMAIN_ID": "Condition",
+          "STANDARD_CONCEPT_CAPTION": "Standard",
+          "CONCEPT_CLASS_ID": "Clinical Finding",
+          "INVALID_REASON": "V"
+        },
+        "includeMapped": false,
+        "includeDescendants": false
+      },
+      {
+        "isExcluded": false,
+        "concept": {
+          "INVALID_REASON_CAPTION": "Valid",
+          "CONCEPT_ID": 4098604,
+          "STANDARD_CONCEPT": "S",
+          "CONCEPT_CODE": "190855004",
+          "VOCABULARY_ID": "SNOMED",
+          "CONCEPT_NAME": "Hypomagnesemia",
+          "DOMAIN_ID": "Condition",
+          "STANDARD_CONCEPT_CAPTION": "Standard",
+          "CONCEPT_CLASS_ID": "Clinical Finding",
+          "INVALID_REASON": "V"
+        },
+        "includeMapped": false,
+        "includeDescendants": false
+      },
+      {
+        "isExcluded": false,
+        "concept": {
+          "INVALID_REASON_CAPTION": "Valid",
+          "CONCEPT_ID": 435371,
+          "STANDARD_CONCEPT": "S",
+          "CONCEPT_CODE": "386689009",
+          "VOCABULARY_ID": "SNOMED",
+          "CONCEPT_NAME": "Hypothermia",
+          "DOMAIN_ID": "Condition",
+          "STANDARD_CONCEPT_CAPTION": "Standard",
+          "CONCEPT_CLASS_ID": "Clinical Finding",
+          "INVALID_REASON": "V"
+        },
+        "includeMapped": false,
+        "includeDescendants": false
+      },
+      {
+        "isExcluded": false,
+        "concept": {
+          "INVALID_REASON_CAPTION": "Valid",
+          "CONCEPT_ID": 443447,
+          "STANDARD_CONCEPT": "S",
+          "CONCEPT_CODE": "408668005",
+          "VOCABULARY_ID": "SNOMED",
+          "CONCEPT_NAME": "Iatrogenic hypotension",
+          "DOMAIN_ID": "Condition",
+          "STANDARD_CONCEPT_CAPTION": "Standard",
+          "CONCEPT_CLASS_ID": "Clinical Finding",
+          "INVALID_REASON": "V"
+        },
+        "includeMapped": false,
+        "includeDescendants": false
+      },
+      {
+        "isExcluded": false,
+        "concept": {
+          "INVALID_REASON_CAPTION": "Valid",
+          "CONCEPT_ID": 374375,
+          "STANDARD_CONCEPT": "S",
+          "CONCEPT_CODE": "18070006",
+          "VOCABULARY_ID": "SNOMED",
+          "CONCEPT_NAME": "Impacted cerumen",
+          "DOMAIN_ID": "Condition",
+          "STANDARD_CONCEPT_CAPTION": "Standard",
+          "CONCEPT_CLASS_ID": "Clinical Finding",
+          "INVALID_REASON": "V"
+        },
+        "includeMapped": false,
+        "includeDescendants": false
+      },
+      {
+        "isExcluded": false,
+        "concept": {
+          "INVALID_REASON_CAPTION": "Valid",
+          "CONCEPT_ID": 4344500,
+          "STANDARD_CONCEPT": "S",
+          "CONCEPT_CODE": "239960007",
+          "VOCABULARY_ID": "SNOMED",
+          "CONCEPT_NAME": "Impingement syndrome of shoulder region",
+          "DOMAIN_ID": "Condition",
+          "STANDARD_CONCEPT_CAPTION": "Standard",
+          "CONCEPT_CLASS_ID": "Clinical Finding",
+          "INVALID_REASON": "V"
+        },
+        "includeMapped": false,
+        "includeDescendants": false
+      },
+      {
+        "isExcluded": false,
+        "concept": {
+          "INVALID_REASON_CAPTION": "Valid",
+          "CONCEPT_ID": 440382,
+          "STANDARD_CONCEPT": "S",
+          "CONCEPT_CODE": "161129001",
+          "VOCABULARY_ID": "SNOMED",
+          "CONCEPT_NAME": "Learning difficulties",
+          "DOMAIN_ID": "Condition",
+          "STANDARD_CONCEPT_CAPTION": "Standard",
+          "CONCEPT_CLASS_ID": "Clinical Finding",
+          "INVALID_REASON": "V"
+        },
+        "includeMapped": false,
+        "includeDescendants": false
+      },
+      {
+        "isExcluded": false,
+        "concept": {
+          "INVALID_REASON_CAPTION": "Valid",
+          "CONCEPT_ID": 435516,
+          "STANDARD_CONCEPT": "S",
+          "CONCEPT_CODE": "267436001",
+          "VOCABULARY_ID": "SNOMED",
+          "CONCEPT_NAME": "Lipoprotein deficiency disorder",
+          "DOMAIN_ID": "Condition",
+          "STANDARD_CONCEPT_CAPTION": "Standard",
+          "CONCEPT_CLASS_ID": "Clinical Finding",
+          "INVALID_REASON": "V"
+        },
+        "includeMapped": false,
+        "includeDescendants": false
+      },
+      {
+        "isExcluded": false,
+        "concept": {
+          "INVALID_REASON_CAPTION": "Valid",
+          "CONCEPT_ID": 438808,
+          "STANDARD_CONCEPT": "S",
+          "CONCEPT_CODE": "22049009",
+          "VOCABULARY_ID": "SNOMED",
+          "CONCEPT_NAME": "Mammary duct ectasia",
+          "DOMAIN_ID": "Condition",
+          "STANDARD_CONCEPT_CAPTION": "Standard",
+          "CONCEPT_CLASS_ID": "Clinical Finding",
+          "INVALID_REASON": "V"
+        },
+        "includeMapped": false,
+        "includeDescendants": false
+      },
+      {
+        "isExcluded": false,
+        "concept": {
+          "INVALID_REASON_CAPTION": "Valid",
+          "CONCEPT_ID": 441553,
+          "STANDARD_CONCEPT": "S",
+          "CONCEPT_CODE": "17450006",
+          "VOCABULARY_ID": "SNOMED",
+          "CONCEPT_NAME": "Myoclonus",
+          "DOMAIN_ID": "Condition",
+          "STANDARD_CONCEPT_CAPTION": "Standard",
+          "CONCEPT_CLASS_ID": "Clinical Finding",
+          "INVALID_REASON": "V"
+        },
+        "includeMapped": false,
+        "includeDescendants": false
+      },
+      {
+        "isExcluded": false,
+        "concept": {
+          "INVALID_REASON_CAPTION": "Valid",
+          "CONCEPT_ID": 4119307,
+          "STANDARD_CONCEPT": "S",
+          "CONCEPT_CODE": "303081002",
+          "VOCABULARY_ID": "SNOMED",
+          "CONCEPT_NAME": "Neurogenic claudication",
+          "DOMAIN_ID": "Condition",
+          "STANDARD_CONCEPT_CAPTION": "Standard",
+          "CONCEPT_CLASS_ID": "Clinical Finding",
+          "INVALID_REASON": "V"
+        },
+        "includeMapped": false,
+        "includeDescendants": false
+      },
+      {
+        "isExcluded": false,
+        "concept": {
+          "INVALID_REASON_CAPTION": "Valid",
+          "CONCEPT_ID": 4209423,
+          "STANDARD_CONCEPT": "S",
+          "CONCEPT_CODE": "56294008",
+          "VOCABULARY_ID": "SNOMED",
+          "CONCEPT_NAME": "Nicotine dependence",
+          "DOMAIN_ID": "Condition",
+          "STANDARD_CONCEPT_CAPTION": "Standard",
+          "CONCEPT_CLASS_ID": "Clinical Finding",
+          "INVALID_REASON": "V"
+        },
+        "includeMapped": false,
+        "includeDescendants": false
+      },
+      {
+        "isExcluded": false,
+        "concept": {
+          "INVALID_REASON_CAPTION": "Valid",
+          "CONCEPT_ID": 438130,
+          "STANDARD_CONCEPT": "S",
+          "CONCEPT_CODE": "5602001",
+          "VOCABULARY_ID": "SNOMED",
+          "CONCEPT_NAME": "Opioid abuse",
+          "DOMAIN_ID": "Condition",
+          "STANDARD_CONCEPT_CAPTION": "Standard",
+          "CONCEPT_CLASS_ID": "Clinical Finding",
+          "INVALID_REASON": "V"
+        },
+        "includeMapped": false,
+        "includeDescendants": false
+      },
+      {
+        "isExcluded": false,
+        "concept": {
+          "INVALID_REASON_CAPTION": "Valid",
+          "CONCEPT_ID": 313601,
+          "STANDARD_CONCEPT": "S",
+          "CONCEPT_CODE": "29658002",
+          "VOCABULARY_ID": "SNOMED",
+          "CONCEPT_NAME": "Oxygen supply absent",
+          "DOMAIN_ID": "Condition",
+          "STANDARD_CONCEPT_CAPTION": "Standard",
+          "CONCEPT_CLASS_ID": "Clinical Finding",
+          "INVALID_REASON": "V"
+        },
+        "includeMapped": false,
+        "includeDescendants": false
+      },
+      {
+        "isExcluded": false,
+        "concept": {
+          "INVALID_REASON_CAPTION": "Valid",
+          "CONCEPT_ID": 44782778,
+          "STANDARD_CONCEPT": "S",
+          "CONCEPT_CODE": "381000119107",
+          "VOCABULARY_ID": "SNOMED",
+          "CONCEPT_NAME": "Pain disorder with psychological factor",
+          "DOMAIN_ID": "Condition",
+          "STANDARD_CONCEPT_CAPTION": "Standard",
+          "CONCEPT_CLASS_ID": "Clinical Finding",
+          "INVALID_REASON": "V"
+        },
+        "includeMapped": false,
+        "includeDescendants": false
+      },
+      {
+        "isExcluded": false,
+        "concept": {
+          "INVALID_REASON_CAPTION": "Valid",
+          "CONCEPT_ID": 4091513,
+          "STANDARD_CONCEPT": "S",
+          "CONCEPT_CODE": "249504006",
+          "VOCABULARY_ID": "SNOMED",
+          "CONCEPT_NAME": "Passing flatus",
+          "DOMAIN_ID": "Condition",
+          "STANDARD_CONCEPT_CAPTION": "Standard",
+          "CONCEPT_CLASS_ID": "Clinical Finding",
+          "INVALID_REASON": "V"
+        },
+        "includeMapped": false,
+        "includeDescendants": false
+      },
+      {
+        "isExcluded": false,
+        "concept": {
+          "INVALID_REASON_CAPTION": "Valid",
+          "CONCEPT_ID": 4022076,
+          "STANDARD_CONCEPT": "S",
+          "CONCEPT_CODE": "105507009",
+          "VOCABULARY_ID": "SNOMED",
+          "CONCEPT_NAME": "Patient dependence on care provider",
+          "DOMAIN_ID": "Condition",
+          "STANDARD_CONCEPT_CAPTION": "Standard",
+          "CONCEPT_CLASS_ID": "Clinical Finding",
+          "INVALID_REASON": "V"
+        },
+        "includeMapped": false,
+        "includeDescendants": false
+      },
+      {
+        "isExcluded": false,
+        "concept": {
+          "INVALID_REASON_CAPTION": "Valid",
+          "CONCEPT_ID": 439971,
+          "STANDARD_CONCEPT": "S",
+          "CONCEPT_CODE": "67438002",
+          "VOCABULARY_ID": "SNOMED",
+          "CONCEPT_NAME": "Poisoning by anticoagulant",
+          "DOMAIN_ID": "Condition",
+          "STANDARD_CONCEPT_CAPTION": "Standard",
+          "CONCEPT_CLASS_ID": "Clinical Finding",
+          "INVALID_REASON": "V"
+        },
+        "includeMapped": false,
+        "includeDescendants": false
+      },
+      {
+        "isExcluded": false,
+        "concept": {
+          "INVALID_REASON_CAPTION": "Valid",
+          "CONCEPT_ID": 46286594,
+          "STANDARD_CONCEPT": "S",
+          "CONCEPT_CODE": "987891000000105",
+          "VOCABULARY_ID": "SNOMED",
+          "CONCEPT_NAME": "Problem related to lifestyle",
+          "DOMAIN_ID": "Condition",
+          "STANDARD_CONCEPT_CAPTION": "Standard",
+          "CONCEPT_CLASS_ID": "Clinical Finding",
+          "INVALID_REASON": "V"
+        },
+        "includeMapped": false,
+        "includeDescendants": false
+      },
+      {
+        "isExcluded": false,
+        "concept": {
+          "INVALID_REASON_CAPTION": "Valid",
+          "CONCEPT_ID": 199876,
+          "STANDARD_CONCEPT": "S",
+          "CONCEPT_CODE": "73998008",
+          "VOCABULARY_ID": "SNOMED",
+          "CONCEPT_NAME": "Prolapse of female genital organs",
+          "DOMAIN_ID": "Condition",
+          "STANDARD_CONCEPT_CAPTION": "Standard",
+          "CONCEPT_CLASS_ID": "Clinical Finding",
+          "INVALID_REASON": "V"
+        },
+        "includeMapped": false,
+        "includeDescendants": false
+      },
+      {
+        "isExcluded": false,
+        "concept": {
+          "INVALID_REASON_CAPTION": "Valid",
+          "CONCEPT_ID": 4049367,
+          "STANDARD_CONCEPT": "S",
+          "CONCEPT_CODE": "20734000",
+          "VOCABULARY_ID": "SNOMED",
+          "CONCEPT_NAME": "Psychologic conversion disorder",
+          "DOMAIN_ID": "Condition",
+          "STANDARD_CONCEPT_CAPTION": "Standard",
+          "CONCEPT_CLASS_ID": "Clinical Finding",
+          "INVALID_REASON": "V"
+        },
+        "includeMapped": false,
+        "includeDescendants": false
+      },
+      {
+        "isExcluded": false,
+        "concept": {
+          "INVALID_REASON_CAPTION": "Valid",
+          "CONCEPT_ID": 440068,
+          "STANDARD_CONCEPT": "S",
+          "CONCEPT_CODE": "268637002",
+          "VOCABULARY_ID": "SNOMED",
+          "CONCEPT_NAME": "Psychosexual dysfunction",
+          "DOMAIN_ID": "Condition",
+          "STANDARD_CONCEPT_CAPTION": "Standard",
+          "CONCEPT_CLASS_ID": "Clinical Finding",
+          "INVALID_REASON": "V"
+        },
+        "includeMapped": false,
+        "includeDescendants": false
+      },
+      {
+        "isExcluded": false,
+        "concept": {
+          "INVALID_REASON_CAPTION": "Valid",
+          "CONCEPT_ID": 436246,
+          "STANDARD_CONCEPT": "S",
+          "CONCEPT_CODE": "8357008",
+          "VOCABULARY_ID": "SNOMED",
+          "CONCEPT_NAME": "Reduced libido",
+          "DOMAIN_ID": "Condition",
+          "STANDARD_CONCEPT_CAPTION": "Standard",
+          "CONCEPT_CLASS_ID": "Clinical Finding",
+          "INVALID_REASON": "V"
+        },
+        "includeMapped": false,
+        "includeDescendants": false
+      },
+      {
+        "isExcluded": false,
+        "concept": {
+          "INVALID_REASON_CAPTION": "Valid",
+          "CONCEPT_ID": 73754,
+          "STANDARD_CONCEPT": "S",
+          "CONCEPT_CODE": "32914008",
+          "VOCABULARY_ID": "SNOMED",
+          "CONCEPT_NAME": "Restless legs",
+          "DOMAIN_ID": "Condition",
+          "STANDARD_CONCEPT_CAPTION": "Standard",
+          "CONCEPT_CLASS_ID": "Clinical Finding",
+          "INVALID_REASON": "V"
+        },
+        "includeMapped": false,
+        "includeDescendants": false
+      },
+      {
+        "isExcluded": false,
+        "concept": {
+          "INVALID_REASON_CAPTION": "Valid",
+          "CONCEPT_ID": 4168212,
+          "STANDARD_CONCEPT": "S",
+          "CONCEPT_CODE": "274647009",
+          "VOCABULARY_ID": "SNOMED",
+          "CONCEPT_NAME": "Restlessness and agitation",
+          "DOMAIN_ID": "Condition",
+          "STANDARD_CONCEPT_CAPTION": "Standard",
+          "CONCEPT_CLASS_ID": "Clinical Finding",
+          "INVALID_REASON": "V"
+        },
+        "includeMapped": false,
+        "includeDescendants": false
+      },
+      {
+        "isExcluded": false,
+        "concept": {
+          "INVALID_REASON_CAPTION": "Valid",
+          "CONCEPT_ID": 138821,
+          "STANDARD_CONCEPT": "S",
+          "CONCEPT_CODE": "86708008",
+          "VOCABULARY_ID": "SNOMED",
+          "CONCEPT_NAME": "Seborrhea",
+          "DOMAIN_ID": "Condition",
+          "STANDARD_CONCEPT_CAPTION": "Standard",
+          "CONCEPT_CLASS_ID": "Clinical Finding",
+          "INVALID_REASON": "V"
+        },
+        "includeMapped": false,
+        "includeDescendants": false
+      },
+      {
+        "isExcluded": false,
+        "concept": {
+          "INVALID_REASON_CAPTION": "Valid",
+          "CONCEPT_ID": 4198492,
+          "STANDARD_CONCEPT": "S",
+          "CONCEPT_CODE": "298854003",
+          "VOCABULARY_ID": "SNOMED",
+          "CONCEPT_NAME": "Shoulder joint unstable",
+          "DOMAIN_ID": "Condition",
+          "STANDARD_CONCEPT_CAPTION": "Standard",
+          "CONCEPT_CLASS_ID": "Clinical Finding",
+          "INVALID_REASON": "V"
+        },
+        "includeMapped": false,
+        "includeDescendants": false
+      },
+      {
+        "isExcluded": false,
+        "concept": {
+          "INVALID_REASON_CAPTION": "Valid",
+          "CONCEPT_ID": 25518,
+          "STANDARD_CONCEPT": "S",
+          "CONCEPT_CODE": "16402000",
+          "VOCABULARY_ID": "SNOMED",
+          "CONCEPT_NAME": "Sickle cell trait",
+          "DOMAIN_ID": "Condition",
+          "STANDARD_CONCEPT_CAPTION": "Standard",
+          "CONCEPT_CLASS_ID": "Clinical Finding",
+          "INVALID_REASON": "V"
+        },
+        "includeMapped": false,
+        "includeDescendants": false
+      },
+      {
+        "isExcluded": false,
+        "concept": {
+          "INVALID_REASON_CAPTION": "Valid",
+          "CONCEPT_ID": 4176908,
+          "STANDARD_CONCEPT": "S",
+          "CONCEPT_CODE": "42786005",
+          "VOCABULARY_ID": "SNOMED",
+          "CONCEPT_NAME": "Snapping thumb syndrome",
+          "DOMAIN_ID": "Condition",
+          "STANDARD_CONCEPT_CAPTION": "Standard",
+          "CONCEPT_CLASS_ID": "Clinical Finding",
+          "INVALID_REASON": "V"
+        },
+        "includeMapped": false,
+        "includeDescendants": false
+      },
+      {
+        "isExcluded": false,
+        "concept": {
+          "INVALID_REASON_CAPTION": "Valid",
+          "CONCEPT_ID": 4248728,
+          "STANDARD_CONCEPT": "S",
+          "CONCEPT_CODE": "72863001",
+          "VOCABULARY_ID": "SNOMED",
+          "CONCEPT_NAME": "Snoring",
+          "DOMAIN_ID": "Condition",
+          "STANDARD_CONCEPT_CAPTION": "Standard",
+          "CONCEPT_CLASS_ID": "Clinical Finding",
+          "INVALID_REASON": "V"
+        },
+        "includeMapped": false,
+        "includeDescendants": false
+      },
+      {
+        "isExcluded": false,
+        "concept": {
+          "INVALID_REASON_CAPTION": "Valid",
+          "CONCEPT_ID": 138278,
+          "STANDARD_CONCEPT": "S",
+          "CONCEPT_CODE": "209409002",
+          "VOCABULARY_ID": "SNOMED",
+          "CONCEPT_NAME": "Sprains and strains of joints and adjacent muscles",
+          "DOMAIN_ID": "Condition",
+          "STANDARD_CONCEPT_CAPTION": "Standard",
+          "CONCEPT_CLASS_ID": "Clinical Finding",
+          "INVALID_REASON": "V"
+        },
+        "includeMapped": false,
+        "includeDescendants": false
+      },
+      {
+        "isExcluded": false,
+        "concept": {
+          "INVALID_REASON_CAPTION": "Valid",
+          "CONCEPT_ID": 4008710,
+          "STANDARD_CONCEPT": "S",
+          "CONCEPT_CODE": "111748005",
+          "VOCABULARY_ID": "SNOMED",
+          "CONCEPT_NAME": "Stenosis due to any device, implant AND/OR graft",
+          "DOMAIN_ID": "Condition",
+          "STANDARD_CONCEPT_CAPTION": "Standard",
+          "CONCEPT_CLASS_ID": "Clinical Finding",
+          "INVALID_REASON": "V"
+        },
+        "includeMapped": false,
+        "includeDescendants": false
+      },
+      {
+        "isExcluded": false,
+        "concept": {
+          "INVALID_REASON_CAPTION": "Valid",
+          "CONCEPT_ID": 40479573,
+          "STANDARD_CONCEPT": "S",
+          "CONCEPT_CODE": "441527004",
+          "VOCABULARY_ID": "SNOMED",
+          "CONCEPT_NAME": "Stimulant abuse",
+          "DOMAIN_ID": "Condition",
+          "STANDARD_CONCEPT_CAPTION": "Standard",
+          "CONCEPT_CLASS_ID": "Clinical Finding",
+          "INVALID_REASON": "V"
+        },
+        "includeMapped": false,
+        "includeDescendants": false
+      },
+      {
+        "isExcluded": false,
+        "concept": {
+          "INVALID_REASON_CAPTION": "Valid",
+          "CONCEPT_ID": 40483172,
+          "STANDARD_CONCEPT": "S",
+          "CONCEPT_CODE": "442406005",
+          "VOCABULARY_ID": "SNOMED",
+          "CONCEPT_NAME": "Stimulant dependence",
+          "DOMAIN_ID": "Condition",
+          "STANDARD_CONCEPT_CAPTION": "Standard",
+          "CONCEPT_CLASS_ID": "Clinical Finding",
+          "INVALID_REASON": "V"
+        },
+        "includeMapped": false,
+        "includeDescendants": false
+      },
+      {
+        "isExcluded": false,
+        "concept": {
+          "INVALID_REASON_CAPTION": "Valid",
+          "CONCEPT_ID": 440233,
+          "STANDARD_CONCEPT": "S",
+          "CONCEPT_CODE": "18888002",
+          "VOCABULARY_ID": "SNOMED",
+          "CONCEPT_NAME": "Strain of supraspinatus muscle AND/OR tendon",
+          "DOMAIN_ID": "Condition",
+          "STANDARD_CONCEPT_CAPTION": "Standard",
+          "CONCEPT_CLASS_ID": "Clinical Finding",
+          "INVALID_REASON": "V"
+        },
+        "includeMapped": false,
+        "includeDescendants": false
+      },
+      {
+        "isExcluded": false,
+        "concept": {
+          "INVALID_REASON_CAPTION": "Valid",
+          "CONCEPT_ID": 4194160,
+          "STANDARD_CONCEPT": "S",
+          "CONCEPT_CODE": "312399001",
+          "VOCABULARY_ID": "SNOMED",
+          "CONCEPT_NAME": "Thyroid function tests abnormal",
+          "DOMAIN_ID": "Condition",
+          "STANDARD_CONCEPT_CAPTION": "Standard",
+          "CONCEPT_CLASS_ID": "Clinical Finding",
+          "INVALID_REASON": "V"
+        },
+        "includeMapped": false,
+        "includeDescendants": false
+      },
+      {
+        "isExcluded": false,
+        "concept": {
+          "INVALID_REASON_CAPTION": "Valid",
+          "CONCEPT_ID": 4216708,
+          "STANDARD_CONCEPT": "S",
+          "CONCEPT_CODE": "71820002",
+          "VOCABULARY_ID": "SNOMED",
+          "CONCEPT_NAME": "Urgent desire for stool",
+          "DOMAIN_ID": "Condition",
+          "STANDARD_CONCEPT_CAPTION": "Standard",
+          "CONCEPT_CLASS_ID": "Clinical Finding",
+          "INVALID_REASON": "V"
+        },
+        "includeMapped": false,
+        "includeDescendants": false
+      },
+      {
+        "isExcluded": false,
+        "concept": {
+          "INVALID_REASON_CAPTION": "Valid",
+          "CONCEPT_ID": 4275889,
+          "STANDARD_CONCEPT": "S",
+          "CONCEPT_CODE": "64269007",
+          "VOCABULARY_ID": "SNOMED",
+          "CONCEPT_NAME": "Visual hallucinations",
+          "DOMAIN_ID": "Condition",
+          "STANDARD_CONCEPT_CAPTION": "Standard",
+          "CONCEPT_CLASS_ID": "Clinical Finding",
+          "INVALID_REASON": "V"
+        },
+        "includeMapped": false,
+        "includeDescendants": false
+      },
+      {
+        "isExcluded": false,
+        "concept": {
+          "INVALID_REASON_CAPTION": "Valid",
+          "CONCEPT_ID": 4193634,
+          "STANDARD_CONCEPT": "S",
+          "CONCEPT_CODE": "79015004",
+          "VOCABULARY_ID": "SNOMED",
+          "CONCEPT_NAME": "Worried",
+          "DOMAIN_ID": "Condition",
+          "STANDARD_CONCEPT_CAPTION": "Standard",
+          "CONCEPT_CLASS_ID": "Clinical Finding",
+          "INVALID_REASON": "V"
+        },
+        "includeMapped": false,
+        "includeDescendants": false
+      }
+    ]},
+    "name": "[OHDSI COV19] HCQ SSZ amoxicillin azithromycin negative control outcomes",
+    "id": 228
+  }],
+  "doPositiveControlSynthesis": false,
+  "id": 34,
+  "packageName": "Covid19TestInActiveCancer",
+  "negativeControls": [
+    {
+      "targetId": 694,
+      "outcomeName": "Abnormal reflex",
+      "comparatorId": 697,
+      "outcomeId": 378256,
+      "type": "outcome"
+    },
+    {
+      "targetId": 694,
+      "outcomeName": "Absent kidney",
+      "comparatorId": 697,
+      "outcomeId": 4092879,
+      "type": "outcome"
+    },
+    {
+      "targetId": 694,
+      "outcomeName": "Alcohol abuse",
+      "comparatorId": 697,
+      "outcomeId": 433753,
+      "type": "outcome"
+    },
+    {
+      "targetId": 694,
+      "outcomeName": "Apnea",
+      "comparatorId": 697,
+      "outcomeId": 321689,
+      "type": "outcome"
+    },
+    {
+      "targetId": 694,
+      "outcomeName": "Benign mammary dysplasia",
+      "comparatorId": 697,
+      "outcomeId": 78200,
+      "type": "outcome"
+    },
+    {
+      "targetId": 694,
+      "outcomeName": "Breath smells unpleasant",
+      "comparatorId": 697,
+      "outcomeId": 4195873,
+      "type": "outcome"
+    },
+    {
+      "targetId": 694,
+      "outcomeName": "Calculus of bile duct",
+      "comparatorId": 697,
+      "outcomeId": 443792,
+      "type": "outcome"
+    },
+    {
+      "targetId": 694,
+      "outcomeName": "Cannabis abuse",
+      "comparatorId": 697,
+      "outcomeId": 434327,
+      "type": "outcome"
+    },
+    {
+      "targetId": 694,
+      "outcomeName": "Cholesterolosis of gallbladder",
+      "comparatorId": 697,
+      "outcomeId": 197318,
+      "type": "outcome"
+    },
+    {
+      "targetId": 694,
+      "outcomeName": "Cocaine abuse",
+      "comparatorId": 697,
+      "outcomeId": 432303,
+      "type": "outcome"
+    },
+    {
+      "targetId": 694,
+      "outcomeName": "Complete trisomy 21 syndrome",
+      "comparatorId": 697,
+      "outcomeId": 439125,
+      "type": "outcome"
+    },
+    {
+      "targetId": 694,
+      "outcomeName": "Cord entanglement without compression",
+      "comparatorId": 697,
+      "outcomeId": 433270,
+      "type": "outcome"
+    },
+    {
+      "targetId": 694,
+      "outcomeName": "Cramp in limb",
+      "comparatorId": 697,
+      "outcomeId": 4311591,
+      "type": "outcome"
+    },
+    {
+      "targetId": 694,
+      "outcomeName": "Cystic fibrosis",
+      "comparatorId": 697,
+      "outcomeId": 441267,
+      "type": "outcome"
+    },
+    {
+      "targetId": 694,
+      "outcomeName": "Delay in physiological development",
+      "comparatorId": 697,
+      "outcomeId": 40486120,
+      "type": "outcome"
+    },
+    {
+      "targetId": 694,
+      "outcomeName": "Delayed milestone",
+      "comparatorId": 697,
+      "outcomeId": 436233,
+      "type": "outcome"
+    },
+    {
+      "targetId": 694,
+      "outcomeName": "Emotional upset",
+      "comparatorId": 697,
+      "outcomeId": 439791,
+      "type": "outcome"
+    },
+    {
+      "targetId": 694,
+      "outcomeName": "Foreign body in ear",
+      "comparatorId": 697,
+      "outcomeId": 374801,
+      "type": "outcome"
+    },
+    {
+      "targetId": 694,
+      "outcomeName": "Foreign body in orifice",
+      "comparatorId": 697,
+      "outcomeId": 259995,
+      "type": "outcome"
+    },
+    {
+      "targetId": 694,
+      "outcomeName": "Gallstone",
+      "comparatorId": 697,
+      "outcomeId": 196456,
+      "type": "outcome"
+    },
+    {
+      "targetId": 694,
+      "outcomeName": "Genetic predisposition",
+      "comparatorId": 697,
+      "outcomeId": 4166231,
+      "type": "outcome"
+    },
+    {
+      "targetId": 694,
+      "outcomeName": "Glycosuria",
+      "comparatorId": 697,
+      "outcomeId": 434164,
+      "type": "outcome"
+    },
+    {
+      "targetId": 694,
+      "outcomeName": "Hemochromatosis",
+      "comparatorId": 697,
+      "outcomeId": 4163735,
+      "type": "outcome"
+    },
+    {
+      "targetId": 694,
+      "outcomeName": "Hemospermia",
+      "comparatorId": 697,
+      "outcomeId": 439871,
+      "type": "outcome"
+    },
+    {
+      "targetId": 694,
+      "outcomeName": "Hypertrophic scar",
+      "comparatorId": 697,
+      "outcomeId": 4058388,
+      "type": "outcome"
+    },
+    {
+      "targetId": 694,
+      "outcomeName": "Hypervitaminosis D",
+      "comparatorId": 697,
+      "outcomeId": 435522,
+      "type": "outcome"
+    },
+    {
+      "targetId": 694,
+      "outcomeName": "Hypnotic or anxiolytic dependence",
+      "comparatorId": 697,
+      "outcomeId": 443236,
+      "type": "outcome"
+    },
+    {
+      "targetId": 694,
+      "outcomeName": "Hypomagnesemia",
+      "comparatorId": 697,
+      "outcomeId": 4098604,
+      "type": "outcome"
+    },
+    {
+      "targetId": 694,
+      "outcomeName": "Hypothermia",
+      "comparatorId": 697,
+      "outcomeId": 435371,
+      "type": "outcome"
+    },
+    {
+      "targetId": 694,
+      "outcomeName": "Iatrogenic hypotension",
+      "comparatorId": 697,
+      "outcomeId": 443447,
+      "type": "outcome"
+    },
+    {
+      "targetId": 694,
+      "outcomeName": "Impacted cerumen",
+      "comparatorId": 697,
+      "outcomeId": 374375,
+      "type": "outcome"
+    },
+    {
+      "targetId": 694,
+      "outcomeName": "Impingement syndrome of shoulder region",
+      "comparatorId": 697,
+      "outcomeId": 4344500,
+      "type": "outcome"
+    },
+    {
+      "targetId": 694,
+      "outcomeName": "Learning difficulties",
+      "comparatorId": 697,
+      "outcomeId": 440382,
+      "type": "outcome"
+    },
+    {
+      "targetId": 694,
+      "outcomeName": "Lipoprotein deficiency disorder",
+      "comparatorId": 697,
+      "outcomeId": 435516,
+      "type": "outcome"
+    },
+    {
+      "targetId": 694,
+      "outcomeName": "Mammary duct ectasia",
+      "comparatorId": 697,
+      "outcomeId": 438808,
+      "type": "outcome"
+    },
+    {
+      "targetId": 694,
+      "outcomeName": "Myoclonus",
+      "comparatorId": 697,
+      "outcomeId": 441553,
+      "type": "outcome"
+    },
+    {
+      "targetId": 694,
+      "outcomeName": "Neurogenic claudication",
+      "comparatorId": 697,
+      "outcomeId": 4119307,
+      "type": "outcome"
+    },
+    {
+      "targetId": 694,
+      "outcomeName": "Nicotine dependence",
+      "comparatorId": 697,
+      "outcomeId": 4209423,
+      "type": "outcome"
+    },
+    {
+      "targetId": 694,
+      "outcomeName": "Opioid abuse",
+      "comparatorId": 697,
+      "outcomeId": 438130,
+      "type": "outcome"
+    },
+    {
+      "targetId": 694,
+      "outcomeName": "Oxygen supply absent",
+      "comparatorId": 697,
+      "outcomeId": 313601,
+      "type": "outcome"
+    },
+    {
+      "targetId": 694,
+      "outcomeName": "Pain disorder with psychological factor",
+      "comparatorId": 697,
+      "outcomeId": 44782778,
+      "type": "outcome"
+    },
+    {
+      "targetId": 694,
+      "outcomeName": "Passing flatus",
+      "comparatorId": 697,
+      "outcomeId": 4091513,
+      "type": "outcome"
+    },
+    {
+      "targetId": 694,
+      "outcomeName": "Patient dependence on care provider",
+      "comparatorId": 697,
+      "outcomeId": 4022076,
+      "type": "outcome"
+    },
+    {
+      "targetId": 694,
+      "outcomeName": "Poisoning by anticoagulant",
+      "comparatorId": 697,
+      "outcomeId": 439971,
+      "type": "outcome"
+    },
+    {
+      "targetId": 694,
+      "outcomeName": "Problem related to lifestyle",
+      "comparatorId": 697,
+      "outcomeId": 46286594,
+      "type": "outcome"
+    },
+    {
+      "targetId": 694,
+      "outcomeName": "Prolapse of female genital organs",
+      "comparatorId": 697,
+      "outcomeId": 199876,
+      "type": "outcome"
+    },
+    {
+      "targetId": 694,
+      "outcomeName": "Psychologic conversion disorder",
+      "comparatorId": 697,
+      "outcomeId": 4049367,
+      "type": "outcome"
+    },
+    {
+      "targetId": 694,
+      "outcomeName": "Psychosexual dysfunction",
+      "comparatorId": 697,
+      "outcomeId": 440068,
+      "type": "outcome"
+    },
+    {
+      "targetId": 694,
+      "outcomeName": "Reduced libido",
+      "comparatorId": 697,
+      "outcomeId": 436246,
+      "type": "outcome"
+    },
+    {
+      "targetId": 694,
+      "outcomeName": "Restless legs",
+      "comparatorId": 697,
+      "outcomeId": 73754,
+      "type": "outcome"
+    },
+    {
+      "targetId": 694,
+      "outcomeName": "Restlessness and agitation",
+      "comparatorId": 697,
+      "outcomeId": 4168212,
+      "type": "outcome"
+    },
+    {
+      "targetId": 694,
+      "outcomeName": "Seborrhea",
+      "comparatorId": 697,
+      "outcomeId": 138821,
+      "type": "outcome"
+    },
+    {
+      "targetId": 694,
+      "outcomeName": "Shoulder joint unstable",
+      "comparatorId": 697,
+      "outcomeId": 4198492,
+      "type": "outcome"
+    },
+    {
+      "targetId": 694,
+      "outcomeName": "Sickle cell trait",
+      "comparatorId": 697,
+      "outcomeId": 25518,
+      "type": "outcome"
+    },
+    {
+      "targetId": 694,
+      "outcomeName": "Snapping thumb syndrome",
+      "comparatorId": 697,
+      "outcomeId": 4176908,
+      "type": "outcome"
+    },
+    {
+      "targetId": 694,
+      "outcomeName": "Snoring",
+      "comparatorId": 697,
+      "outcomeId": 4248728,
+      "type": "outcome"
+    },
+    {
+      "targetId": 694,
+      "outcomeName": "Sprains and strains of joints and adjacent muscles",
+      "comparatorId": 697,
+      "outcomeId": 138278,
+      "type": "outcome"
+    },
+    {
+      "targetId": 694,
+      "outcomeName": "Stenosis due to any device, implant AND/OR graft",
+      "comparatorId": 697,
+      "outcomeId": 4008710,
+      "type": "outcome"
+    },
+    {
+      "targetId": 694,
+      "outcomeName": "Stimulant abuse",
+      "comparatorId": 697,
+      "outcomeId": 40479573,
+      "type": "outcome"
+    },
+    {
+      "targetId": 694,
+      "outcomeName": "Stimulant dependence",
+      "comparatorId": 697,
+      "outcomeId": 40483172,
+      "type": "outcome"
+    },
+    {
+      "targetId": 694,
+      "outcomeName": "Strain of supraspinatus muscle AND/OR tendon",
+      "comparatorId": 697,
+      "outcomeId": 440233,
+      "type": "outcome"
+    },
+    {
+      "targetId": 694,
+      "outcomeName": "Thyroid function tests abnormal",
+      "comparatorId": 697,
+      "outcomeId": 4194160,
+      "type": "outcome"
+    },
+    {
+      "targetId": 694,
+      "outcomeName": "Urgent desire for stool",
+      "comparatorId": 697,
+      "outcomeId": 4216708,
+      "type": "outcome"
+    },
+    {
+      "targetId": 694,
+      "outcomeName": "Visual hallucinations",
+      "comparatorId": 697,
+      "outcomeId": 4275889,
+      "type": "outcome"
+    },
+    {
+      "targetId": 694,
+      "outcomeName": "Worried",
+      "comparatorId": 697,
+      "outcomeId": 4193634,
+      "type": "outcome"
+    }
+  ]
+}

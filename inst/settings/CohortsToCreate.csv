@@ -1,0 +1,4 @@
+atlasId,atlasName,cohortId,name
+694,[SCY] Persons with a COVID-19 test and positive result and active cancer age>=18 and requiring prior observation,694,SCY_Persons_with_a_COVID19_test_and_positive_result_and_active_cancer_age18_and_requiring_prior_observation
+697,[SCY] Persons with a COVID-19 test and no positive result and active cancer age>=18 and requiring prior observation,697,SCY_Persons_with_a_COVID19_test_and_no_positive_result_and_active_cancer_age18_and_requiring_prior_observation
+58,All-cause mortality,58,Allcause_mortality

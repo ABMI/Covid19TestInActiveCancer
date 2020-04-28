@@ -1,0 +1,66 @@
+targetId,comparatorId,outcomeId,outcomeName,type
+694,697,378256,Abnormal reflex,outcome
+694,697,4092879,Absent kidney,outcome
+694,697,433753,Alcohol abuse,outcome
+694,697,321689,Apnea,outcome
+694,697,78200,Benign mammary dysplasia,outcome
+694,697,4195873,Breath smells unpleasant,outcome
+694,697,443792,Calculus of bile duct,outcome
+694,697,434327,Cannabis abuse,outcome
+694,697,197318,Cholesterolosis of gallbladder,outcome
+694,697,432303,Cocaine abuse,outcome
+694,697,439125,Complete trisomy 21 syndrome,outcome
+694,697,433270,Cord entanglement without compression,outcome
+694,697,4311591,Cramp in limb,outcome
+694,697,441267,Cystic fibrosis,outcome
+694,697,40486120,Delay in physiological development,outcome
+694,697,436233,Delayed milestone,outcome
+694,697,439791,Emotional upset,outcome
+694,697,374801,Foreign body in ear,outcome
+694,697,259995,Foreign body in orifice,outcome
+694,697,196456,Gallstone,outcome
+694,697,4166231,Genetic predisposition,outcome
+694,697,434164,Glycosuria,outcome
+694,697,4163735,Hemochromatosis,outcome
+694,697,439871,Hemospermia,outcome
+694,697,4058388,Hypertrophic scar,outcome
+694,697,435522,Hypervitaminosis D,outcome
+694,697,443236,Hypnotic or anxiolytic dependence,outcome
+694,697,4098604,Hypomagnesemia,outcome
+694,697,435371,Hypothermia,outcome
+694,697,443447,Iatrogenic hypotension,outcome
+694,697,374375,Impacted cerumen,outcome
+694,697,4344500,Impingement syndrome of shoulder region,outcome
+694,697,440382,Learning difficulties,outcome
+694,697,435516,Lipoprotein deficiency disorder,outcome
+694,697,438808,Mammary duct ectasia,outcome
+694,697,441553,Myoclonus,outcome
+694,697,4119307,Neurogenic claudication,outcome
+694,697,4209423,Nicotine dependence,outcome
+694,697,438130,Opioid abuse,outcome
+694,697,313601,Oxygen supply absent,outcome
+694,697,44782778,Pain disorder with psychological factor,outcome
+694,697,4091513,Passing flatus,outcome
+694,697,4022076,Patient dependence on care provider,outcome
+694,697,439971,Poisoning by anticoagulant,outcome
+694,697,46286594,Problem related to lifestyle,outcome
+694,697,199876,Prolapse of female genital organs,outcome
+694,697,4049367,Psychologic conversion disorder,outcome
+694,697,440068,Psychosexual dysfunction,outcome
+694,697,436246,Reduced libido,outcome
+694,697,73754,Restless legs,outcome
+694,697,4168212,Restlessness and agitation,outcome
+694,697,138821,Seborrhea,outcome
+694,697,4198492,Shoulder joint unstable,outcome
+694,697,25518,Sickle cell trait,outcome
+694,697,4176908,Snapping thumb syndrome,outcome
+694,697,4248728,Snoring,outcome
+694,697,138278,Sprains and strains of joints and adjacent muscles,outcome
+694,697,4008710,"Stenosis due to any device, implant AND/OR graft",outcome
+694,697,40479573,Stimulant abuse,outcome
+694,697,40483172,Stimulant dependence,outcome
+694,697,440233,Strain of supraspinatus muscle AND/OR tendon,outcome
+694,697,4194160,Thyroid function tests abnormal,outcome
+694,697,4216708,Urgent desire for stool,outcome
+694,697,4275889,Visual hallucinations,outcome
+694,697,4193634,Worried,outcome
