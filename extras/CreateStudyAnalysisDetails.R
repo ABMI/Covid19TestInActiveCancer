@@ -135,7 +135,7 @@ cmAnalysis4 <- CohortMethod::createCmAnalysis(analysisId = 4,
                                               createPs = TRUE,
                                               createPsArgs = createMinPsArgs,
                                               matchOnPs = TRUE,
-                                              matchOnPsArgs = matchByPsArgs,
+                                              matchOnPsArgs = oneToOneMatchByPsArgs,
                                               fitOutcomeModel = TRUE,
                                               fitOutcomeModelArgs = fitPsOutcomeModelArgsUnConditioned)
 
@@ -148,7 +148,7 @@ cmAnalysis7 <- CohortMethod::createCmAnalysis(analysisId = 7,
                                               createPs = TRUE,
                                               createPsArgs = createMinPsArgs,
                                               matchOnPs = TRUE,
-                                              matchOnPsArgs = matchByPsArgs,
+                                              matchOnPsArgs = variableRatioMatchByPsArgs,
                                               fitOutcomeModel = TRUE,
                                               fitOutcomeModelArgs = fitPsOutcomeModelArgsConditioned)
 
