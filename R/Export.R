@@ -1,6 +1,6 @@
 # Copyright 2019 Observational Health Data Sciences and Informatics
 #
-# This file is part of Covid19ComplicationsRasInhibitors
+# This file is part of Covid19TestInActiveCancer
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -68,14 +68,14 @@ exportResults <- function(outputFolder,
                     databaseId = databaseId,
                     minCellCount = minCellCount,
                     maxCores = maxCores)
-  
+
   exportProfiles(outputFolder = outputFolder,
                  exportFolder = exportFolder,
                  databaseId = databaseId,
                  minCellCount = minCellCount,
                  maxCores = maxCores)
-  
-  
+
+
 
   # Add all to zip file -------------------------------------------------------------------------------
   ParallelLogger::logInfo("Adding results to zip file")
@@ -95,7 +95,7 @@ exportAnalyses <- function(outputFolder, exportFolder) {
 
   cmAnalysisListFile <- system.file("settings",
                                     "cmAnalysisList.json",
-                                    package = "Covid19ComplicationsRasInhibitors")
+                                    package = "Covid19TestInActiveCancer")
   cmAnalysisList <- CohortMethod::loadCmAnalysisList(cmAnalysisListFile)
   cmAnalysisToRow <- function(cmAnalysis) {
     ParallelLogger::saveSettingsToJson(cmAnalysis, tempFileName)
@@ -137,14 +137,14 @@ exportAnalyses <- function(outputFolder, exportFolder) {
 exportExposures <- function(outputFolder, exportFolder) {
   ParallelLogger::logInfo("Exporting exposures")
   ParallelLogger::logInfo("- exposure_of_interest table")
-  pathToCsv <- system.file("settings", "TcosOfInterest.csv", package = "Covid19ComplicationsRasInhibitors")
+  pathToCsv <- system.file("settings", "TcosOfInterest.csv", package = "Covid19TestInActiveCancer")
   tcosOfInterest <- read.csv(pathToCsv, stringsAsFactors = FALSE)
-  pathToCsv <- system.file("settings", "CohortsToCreate.csv", package = "Covid19ComplicationsRasInhibitors")
+  pathToCsv <- system.file("settings", "CohortsToCreate.csv", package = "Covid19TestInActiveCancer")
   cohortsToCreate <- read.csv(pathToCsv)
   createExposureRow <- function(exposureId) {
     atlasName <- as.character(cohortsToCreate$atlasName[cohortsToCreate$cohortId == exposureId])
     name <- as.character(cohortsToCreate$name[cohortsToCreate$cohortId == exposureId])
-    cohortFileName <- system.file("cohorts", paste0(name, ".json"), package = "Covid19ComplicationsRasInhibitors")
+    cohortFileName <- system.file("cohorts", paste0(name, ".json"), package = "Covid19TestInActiveCancer")
     definition <- readChar(cohortFileName, file.info(cohortFileName)$size)
     return(data.frame(exposureId = exposureId,
                       exposureName = atlasName,
@@ -161,12 +161,12 @@ exportExposures <- function(outputFolder, exportFolder) {
 exportOutcomes <- function(outputFolder, exportFolder) {
   ParallelLogger::logInfo("Exporting outcomes")
   ParallelLogger::logInfo("- outcome_of_interest table")
-  pathToCsv <- system.file("settings", "CohortsToCreate.csv", package = "Covid19ComplicationsRasInhibitors")
+  pathToCsv <- system.file("settings", "CohortsToCreate.csv", package = "Covid19TestInActiveCancer")
   cohortsToCreate <- read.csv(pathToCsv)
   createOutcomeRow <- function(outcomeId) {
     atlasName <- as.character(cohortsToCreate$atlasName[cohortsToCreate$cohortId == outcomeId])
     name <- as.character(cohortsToCreate$name[cohortsToCreate$cohortId == outcomeId])
-    cohortFileName <- system.file("cohorts", paste0(name, ".json"), package = "Covid19ComplicationsRasInhibitors")
+    cohortFileName <- system.file("cohorts", paste0(name, ".json"), package = "Covid19TestInActiveCancer")
     definition <- readChar(cohortFileName, file.info(cohortFileName)$size)
     return(data.frame(outcomeId = outcomeId,
                       outcomeName = atlasName,
@@ -181,7 +181,7 @@ exportOutcomes <- function(outputFolder, exportFolder) {
 
 
   ParallelLogger::logInfo("- negative_control_outcome table")
-  pathToCsv <- system.file("settings", "NegativeControls.csv", package = "Covid19ComplicationsRasInhibitors")
+  pathToCsv <- system.file("settings", "NegativeControls.csv", package = "Covid19TestInActiveCancer")
   negativeControls <- read.csv(pathToCsv)
   negativeControls <- negativeControls[tolower(negativeControls$type) == "outcome", ]
   negativeControls <- negativeControls[, c("outcomeId", "outcomeName")]
@@ -193,7 +193,7 @@ exportOutcomes <- function(outputFolder, exportFolder) {
   synthesisSummaryFile <- file.path(outputFolder, "SynthesisSummary.csv")
   if (file.exists(synthesisSummaryFile)) {
     positiveControls <- read.csv(synthesisSummaryFile, stringsAsFactors = FALSE)
-    pathToCsv <- system.file("settings", "NegativeControls.csv", package = "Covid19ComplicationsRasInhibitors")
+    pathToCsv <- system.file("settings", "NegativeControls.csv", package = "Covid19TestInActiveCancer")
     negativeControls <- read.csv(pathToCsv)
     positiveControls <- merge(positiveControls,
                               negativeControls[, c("outcomeId", "outcomeName")])
@@ -701,14 +701,14 @@ exportProfiles <- function(outputFolder,
       }
       ids <- gsub("^.*_a", "", ids)
       analysisId <- as.numeric(gsub(".rds", "", ids))
-      
+
       profile <- readRDS(files[i])
       profile$targetId <- targetId
       profile$comparatorId <- comparatorId
       profile$outcomeId <- outcomeId
       profile$analysisId <- analysisId
       profile$databaseId <- databaseId
-  
+
       colnames(profile) <- SqlRender::camelCaseToSnakeCase(colnames(profile))
       write.table(x = profile,
                   file = fileName,

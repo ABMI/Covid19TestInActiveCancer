@@ -57,7 +57,7 @@ generateDiagnostics <- function(outputFolder, minSubjectsForPs = 10, makePlots, 
   ParallelLogger::stopCluster(cluster)
 }
 
-createDiagnosticsForSubset <- function(subset, allControls, outputFolder, cmOutputFolder, 
+createDiagnosticsForSubset <- function(subset, allControls, outputFolder, cmOutputFolder,
                                        diagnosticsFolder, minSubjectsForPs, makePlots) {
   targetId <- subset$targetId[1]
   comparatorId <- subset$comparatorId[1]
@@ -260,7 +260,7 @@ debug_plotCovariateBalanceScatterPlot <- function(balance,
     }
     dummy <- data.frame(text = paste(labels, collapse = "\n"))
     plot <- plot + ggplot2::geom_label(x = limits[1] + 0.01, y = limits[2], hjust = "left", vjust = "top", alpha = 0.8, ggplot2::aes(label = text), data = dummy, size = 3.5)
-    
+
   }
   if (!is.null(fileName)) {
     ggplot2::ggsave(fileName, plot, width = 4, height = 4, dpi = 400)
@@ -294,7 +294,7 @@ debug_plotCovariateBalanceOfTopVariables <- function(balance,
   topAfter <- topAfter[1:n, ]
   topAfter$facet <- paste("Top", n, afterLabel)
   filtered <- rbind(topBefore, topAfter)
-  
+
   data <- data.frame(covariateId = rep(filtered$covariateId, 2),
                      covariate = rep(filtered$covariateName, 2),
                      difference = c(filtered$beforeMatchingStdDiff, filtered$afterMatchingStdDiff),
